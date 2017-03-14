@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>张春萌Zblog</title>
+    <meta name="description" content="">
+    <meta name="author" content="templatemo">
+    <link rel="shortcut icon" href="favicon.ico" type="/image/favicon"/>
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/templatemo-style.css" rel="stylesheet">
+
+</head>
+<body>
+<!-- Left column -->
+<div class="templatemo-flex-row">
+    <div class="templatemo-sidebar">
+        <header class="templatemo-site-header">
+            <div class="square"></div>
+            <a href="/welcome/index.do"><h1 class="media-heading text-uppercase">张春萌个人博客</h1></a>
+        </header>
+        <div class="profile-photo-container">
+            <img src="/images/personal.jpg" alt="Profile Photo" class="img-responsive">
+            <div class="profile-photo-overlay"></div>
+        </div>
+        <!-- Search box -->
+        <form class="templatemo-search-form" role="search">
+            <div class="input-group">
+                <button type="submit" class="fa fa-search"></button>
+                <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+            </div>
+        </form>
+        <div class="mobile-menu-icon">
+            <i class="fa fa-bars"></i>
+        </div>
+        <nav class="templatemo-left-nav">
+            <ul>
+                <li><a href="/welcome/article.do"><i class="fa fa-file-code-o" aria-hidden="true"></i>文章</a></li>
+                <li><a href="/welcome/discuss.do"><i class="
+				fa fa-list-alt fa-fw"></i>讨论</a></li>
+                <li><a href="/welcome/message.do"><i class="fa fa-th-list fa-fw"></i>留言</a></li>
+                <li><a href="/welcome/aboutme.do"><i class="fa fa-black-tie fa-fw"></i>关于我</a></li>
+                <#if Session.user?exists>
+                    <li><a href="/login/logout.do"><i class="fa fa-sign-out fa-fw"></i>退出登录</a></li>
+                    <#else>
+                        <li><a href="/welcome/register.do" target="_blank"><i class="fa fa-sign-in fa-fw"></i>注册/登录</a>
+                        </li>
+                </#if>
+            </ul>
+        </nav>
+    </div>
+    <!-- Main content -->
+    <div class="templatemo-content col-1 light-gray-bg">
+        <div class="templatemo-content-container">
+            <div class="templatemo-flex-row flex-content-row">
+                <div class="templatemo-content-widget white-bg col-2">
+                    <i class="fa"></i>
+                    <div class="square"></div>
+                    <h2 class="templatemo-inline-block">JAVA开发工程师</h2>
+                    <hr>
+                    <p style="line-height: 25px;">熟练掌握JavaSE基础和JavaEE技术规范（JSP , Servlet，JDBC等） <br>
+                        熟悉JavaEE流行框架Spring，Mybatis，Maven。以及SVN,GIT工具使用。<br>
+                        熟悉HTML，CSS，JS，JQuery，AJAX，XML的简单功能和基于JSON数据格式的交换。<br>
+                        熟悉Python，了解 Django简单配置，爬虫相关模块。 熟悉Mysql，SQLServer，Mongodb。<br></p>
+                </div>
+                <div class="templatemo-content-widget white-bg col-1">
+                    <i class="fa"></i>
+                    <h2 class="text-uppercase">技能水平</h2>
+                    <hr>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="70"
+                             aria-valuemin="0" aria-valuemax="100" style="width: 80%;"><span
+                                style="top:0;left:0;font-size:11px;color:#fff;text-transform:capitalize;">Java</span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60"
+                             aria-valuemin="0" aria-valuemax="100" style="width: 70%;"><span
+                                style="top:0;left:0;font-size:11px;color:#fff;text-transform:capitalize;">Mysql</span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60"
+                             aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><span
+                                style="top:0;left:0;font-size:11px;color:#fff;text-transform:capitalize;">Python</span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60"
+                             aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><span
+                                style="top:0;left:0;font-size:11px;color:#fff;text-transform:capitalize;">Ajax</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="templatemo-flex-row flex-content-row">
+                <div class="col-1">
+                    <#if articleList?exists>
+                        <#list articleList as article >
+                            <div class="templatemo-content-widget white-bg">
+                                <i class="fa"></i>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object img-rounded" src="/images/sunset.jpg" alt="Sunset">
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <a href="/welcome/articledetail.do?articleid=${article.articleid}"><h2
+                                                class="media-heading text-uppercase"> ${article.title}<span
+                                                class="badge">new</span></h2></a>
+                                        <div class="hidden-xs">
+                                            <#if article.content?length lt 150>
+                                                ${(article.content)?default("")}&nbsp;
+                                                <#else>
+                                                    ${(article.content[0..150])?default("")}...
+                                            </#if>
+                                        </div>
+                                        <br>
+                                        <div style="text-align:right;">
+                                            <i class="fa fa-eye" aria-hidden="true"></i>${article.wcount}&nbsp;&nbsp;&nbsp;&nbsp;
+                                            ${article.createDatetime?string("yyyy-MM-dd HH:mm:ss ")}&nbsp;&nbsp;
+                                            <a href="/welcome/articledetail.do?articleid=${article.articleid}">阅读全文</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </#list>
+                    </#if>
+                </div>
+            </div> <!-- Second row ends -->
+        </div>
+
+        <div class="templatemo-content-widget white-bg col-2">
+            <div class="templatemo-flex-row flex-content-row">
+                <div class="col-1">
+                    <div class="panel-default margin-10"
+                         style="border: 1px solid #d7d7d7;border-radius: 10px;padding-top: 20px;">
+                        <h2 class="col-1 text-center">最热文章<span class="badge">hot</span></h2>
+                        <hr>
+                        <div class="templatemo-chart margin-10"style=" padding: 20px;">
+                            <ol>
+                                <#if articlehot?exists>
+                                    <#list articlehot as a >
+                                        <li>
+                                            <div class="margin-bottom-10" style="line-height: 28px;"><a
+                                                    href="/welcome/articledetail.do?articleid=${a.articleid}">
+                                                <h5 class="media-heading text-uppercase" style="color: black;">
+                                                    ${a.title}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                                                    ${a.createDatetime?string("yyyy-MM-dd HH:mm:ss ")}</h5></a>
+                                            </div>
+                                        </li>
+                                    </#list>
+                                </#if>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1">
+                    <div class="panel-default margin-10"
+                         style="border: 1px solid #d7d7d7;border-radius: 10px;padding-top: 20px;">
+                        <h2 class="col-1 text-center">最热讨论<span class="badge">hot</span></h2>
+                        <hr>
+                        <div class="templatemo-chart margin-10" style=" padding: 20px;">
+                            <ol>
+                                <#if discusshot?exists>
+                                    <#list discusshot as d >
+                                        <li>
+                                            <div class="margin-bottom-10"
+                                                 style="line-height: 28px;"><a
+                                                    href="/welcome/discussdetail.do?discussid=${d.discussid}">
+                                                <h5 class="media-heading text-uppercase" style="color: black;">
+                                                    ${d.topic}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    &nbsp;&nbsp;
+                                                    ${d.discussDatetime?string("yyyy-MM-dd HH:mm:ss ")}</h5>
+                                            </a>
+                                            </div>
+                                        </li>
+                                    </#list>
+                                </#if>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="text-right">
+            <p>Copyright &copy;ZCM</p>
+        </footer>
+    </div>
+</div>
+
+
+<!-- JS -->
+<script src="/js/jquery-1.11.2.min.js"></script>      <!-- jQuery -->
+<script src="/js/jquery-migrate-1.2.1.min.js"></script> <!--  jQuery Migrate Plugin -->
+<script type="text/javascript" src="/js/templatemo-script.js"></script>      <!-- Templatemo Script -->
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Zblog -Register</title>
+    <meta name="description" content="">
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/templatemo-style.css" rel="stylesheet">
+    <script src="/js/jquery-1.11.2.min.js"></script>
+</head>
+<body class="light-gray-bg">
+<div class="templatemo-content-widget templatemo-login-widget white-bg">
+    <header class="text-center">
+        <div class="square"></div>
+        <h1>Zblog register</h1>
+    </header>
+    <form action="/welcome/register.do" class="templatemo-login-form">
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-addon"><i class="fa fa-user fa-fw"></i></div>
+                <input type="text" name="username" id="username" class="form-control" placeholder="username">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-addon"><i class="fa fa-envelope-o  fa-fw"></i></div>
+                <input type="text" name="email" id="email" class="form-control" placeholder="zhangcm16@163.com">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-addon"><i class="fa fa-key fa-fw"></i></div>
+                <input type="password" name="userpwd" id="userpwd" class="form-control" placeholder="******">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-addon"><i class="fa fa-key fa-fw"></i></div>
+                <input type="password" name="truepwd" id="truepwd" class="form-control" placeholder="******">
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="templatemo-blue-button width-100" onclick="check()">注册</button>
+        </div>
+    </form>
+</div>
+<div class="templatemo-content-widget templatemo-login-widget templatemo-register-widget white-bg">
+    <p>已经注册用户？ <strong><a href="/welcome/login.do" class="blue-text">登录 now!</a></strong></p>
+</div>
+<script src="/js/jquery-1.11.2.min.js"></script>      <!-- jQuery -->
+<script language="javascript" type="text/javascript">
+    //<![CDATA[
+    function check() {
+        var email_address = $("#email").val();
+        var username = $("#username").val();
+        var userpwd = $("#userpwd").val();
+        var truepwd = $("#truepwd").val();
+        var regex = /^([0-9A-Za-z\-_\.]+)@([0-9a-z]+\.[a-z]{2,3}(\.[a-z]{2})?)$/g;
+        if (username == "") {
+            window.alert("您输入的用户名为空");
+            return false;
+        } else if (!regex.test(email_address)) {
+            window.alert("您输入的电子邮件地址不合法");
+            return false;
+        }
+        else if (truepwd != userpwd) {
+            window.alert("您输入的两次密码不一致");
+            return false;
+        }
+        else {
+            window.alert("注册成功");
+            return true;
+        }
+
+    }
+    //]]>
+</script>
+</body>
+
+</html>

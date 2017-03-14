@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User- Login</title>
+    <meta name="description" content="">
+    <meta name="author" content="templatemo">
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/templatemo-style.css" rel="stylesheet">
+    <script src="/js/jquery-1.11.2.min.js"></script>
+</head>
+<body class="light-gray-bg">
+<div class="templatemo-content-widget templatemo-login-widget white-bg">
+    <header class="text-center">
+        <div class="square"></div>
+        <h1>Zblog Login</h1>
+    </header>
+    <form action="/login/login.do" id="login"  method="post" class="templatemo-login-form">
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-addon"><i class="fa fa-user fa-fw"></i></div>
+                <input type="text" id="username" name="username" class="form-control" placeholder="username">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-addon"><i class="fa fa-key fa-fw"></i></div>
+                <input type="password" id="userpwd" name="userpwd" class="form-control" placeholder="******">
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="templatemo-blue-button width-100" onclick="check()">登录</button>
+        </div>
+    </form>
+</div>
+<div class="templatemo-content-widget templatemo-login-widget templatemo-register-widget white-bg">
+    <p>没有注册？ <strong><a href="/welcome/register.do" class="blue-text">注册 now!</a></strong></p>
+</div>
+<script src="/js/jquery-1.11.2.min.js"></script>      <!-- jQuery -->
+<script language="javascript" type="text/javascript">
+    //<![CDATA[
+    function check() {
+        var username = $("#username").val();
+        var password = $("#userpwd").val();
+        if (username == "") {
+            window.alert("请输入用户名");
+            return false;
+        } else if (password == "") {
+            window.alert("请输入密码");
+            return false;
+        } else {
+            return true;
+        }
+
+    }
+    //]]>
+</script>
+</body>
+</html>

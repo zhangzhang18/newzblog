@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zblog.dao.ArticleMapper">
+    <resultMap id="BaseResultMap" type="com.zblog.model.Article">
+        <id column="articleid" property="articleid" jdbcType="INTEGER"/>
+        <result column="author" property="author" jdbcType="INTEGER"/>
+        <result column="title" property="title" jdbcType="VARCHAR"/>
+        <result column="articletype" property="articletype" jdbcType="INTEGER"/>
+        <result column="create_datetime" property="createDatetime" jdbcType="TIMESTAMP"/>
+        <result column="update_datetime" property="updateDatetime" jdbcType="TIMESTAMP"/>
+        <result column="is_discuss" property="isDiscuss" jdbcType="INTEGER"/>
+        <result column="discuss_count" property="discussCount" jdbcType="INTEGER"/>
+        <result column="is_like" property="isLike" jdbcType="INTEGER"/>
+        <result column="wcount" jdbcType="INTEGER" property="wcount"/>
+        <result column="like_count" property="likeCount" jdbcType="INTEGER"/>
+        <association property="user" javaType="com.zblog.model.User">
+            <id column="userid" property="userid" jdbcType="INTEGER"/>
+            <result column="username" property="username" jdbcType="VARCHAR"/>
+            <result column="email" property="email" jdbcType="VARCHAR"/>
+            <result column="nickname" property="nickname" jdbcType="VARCHAR"/>
+        </association>
+    </resultMap>
+    <resultMap id="ResultMapWithBLOBs" type="com.zblog.model.Article" extends="BaseResultMap">
+        <result column="content" property="content" jdbcType="LONGVARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    articleid, author, title, articletype, create_datetime, update_datetime, is_discuss, 
+    discuss_count, is_like, like_count,wcount,nickname,userid
+  </sql>
+    <sql id="Blob_Column_List">
+    content
+  </sql>
+    <select id="getArticle" resultMap="ResultMapWithBLOBs">
+    SELECT * FROM article
+  </select>
+    <!--首页文章-->
+    <select id="SelectArticleByZcm" resultMap="ResultMapWithBLOBs">
+    SELECT * FROM article WHERE author=0 ORDER BY create_datetime LIMIT 6
+  </select>
+    <!--热门文章-->
+    <select id="SelectHotArticleByZcm" resultMap="ResultMapWithBLOBs">
+        SELECT * FROM article WHERE author=0 ORDER BY wcount LIMIT 6
+    </select>
+
+    <select id="getArticleByZcm" resultMap="ResultMapWithBLOBs">
+        SELECT * FROM article,user WHERE  user.userid=0
+    </select>
+    <!--最新文章-->
+    <select id="SelectNewArticleByZcm" resultMap="ResultMapWithBLOBs">
+  SELECT * FROM article WHERE author=0 ORDER BY create_datetime LIMIT 2
+  </select>
+    <!--首页文章结束-->
+    <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        ,
+        <include refid="Blob_Column_List"/>
+        from article,user
+        where articleid = #{articleid,jdbcType=INTEGER} and article.author=user.userid
+    </select>
+    <!--用户全部文章-->
+
+    <select id="SelectAllArticleById" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer">
+        select *
+        from article,user
+        where author = #{author,jdbcType=INTEGER} and article.author=user.userid
+    </select>
+    <select id="SelectArticleByUId" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer">
+        select *
+        from article,user
+        where  articleid = #{articleid,jdbcType=INTEGER} and article.author=user.userid
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from article
+    where articleid = #{articleid,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="com.zblog.model.Article">
+    insert into article (articleid, author, title, 
+      articletype, create_datetime, update_datetime, 
+      is_discuss, discuss_count, is_like, 
+      like_count, content)
+    values (#{articleid,jdbcType=INTEGER}, #{author,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, 
+      #{articletype,jdbcType=INTEGER}, #{createDatetime,jdbcType=TIMESTAMP}, #{updateDatetime,jdbcType=TIMESTAMP}, 
+      #{isDiscuss,jdbcType=INTEGER}, #{discussCount,jdbcType=INTEGER}, #{isLike,jdbcType=INTEGER}, 
+      #{likeCount,jdbcType=INTEGER}, #{content,jdbcType=LONGVARCHAR})
+  </insert>
+    <insert id="insertSelective" parameterType="com.zblog.model.Article">
+        insert into article
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="articleid != null">
+                articleid,
+            </if>
+            <if test="author != null">
+                author,
+            </if>
+            <if test="title != null">
+                title,
+            </if>
+            <if test="articletype != null">
+                articletype,
+            </if>
+            <if test="createDatetime != null">
+                create_datetime,
+            </if>
+            <if test="updateDatetime != null">
+                update_datetime,
+            </if>
+            <if test="isDiscuss != null">
+                is_discuss,
+            </if>
+            <if test="discussCount != null">
+                discuss_count,
+            </if>
+            <if test="isLike != null">
+                is_like,
+            </if>
+            <if test="likeCount != null">
+                like_count,
+            </if>
+            <if test="content != null">
+                content,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="articleid != null">
+                #{articleid,jdbcType=INTEGER},
+            </if>
+            <if test="author != null">
+                #{author,jdbcType=INTEGER},
+            </if>
+            <if test="title != null">
+                #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="articletype != null">
+                #{articletype,jdbcType=INTEGER},
+            </if>
+            <if test="createDatetime != null">
+                #{createDatetime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateDatetime != null">
+                #{updateDatetime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="isDiscuss != null">
+                #{isDiscuss,jdbcType=INTEGER},
+            </if>
+            <if test="discussCount != null">
+                #{discussCount,jdbcType=INTEGER},
+            </if>
+            <if test="isLike != null">
+                #{isLike,jdbcType=INTEGER},
+            </if>
+            <if test="likeCount != null">
+                #{likeCount,jdbcType=INTEGER},
+            </if>
+            <if test="content != null">
+                #{content,jdbcType=LONGVARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.zblog.model.Article">
+        update article
+        <set>
+            <if test="author != null">
+                author = #{author,jdbcType=INTEGER},
+            </if>
+            <if test="title != null">
+                title = #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="articletype != null">
+                articletype = #{articletype,jdbcType=INTEGER},
+            </if>
+            <if test="createDatetime != null">
+                create_datetime = #{createDatetime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateDatetime != null">
+                update_datetime = #{updateDatetime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="isDiscuss != null">
+                is_discuss = #{isDiscuss,jdbcType=INTEGER},
+            </if>
+            <if test="discussCount != null">
+                discuss_count = #{discussCount,jdbcType=INTEGER},
+            </if>
+            <if test="isLike != null">
+                is_like = #{isLike,jdbcType=INTEGER},
+            </if>
+            <if test="likeCount != null">
+                like_count = #{likeCount,jdbcType=INTEGER},
+            </if>
+            <if test="content != null">
+                content = #{content,jdbcType=LONGVARCHAR},
+            </if>
+        </set>
+        where articleid = #{articleid,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.zblog.model.Article">
+    update article
+    set author = #{author,jdbcType=INTEGER},
+      title = #{title,jdbcType=VARCHAR},
+      articletype = #{articletype,jdbcType=INTEGER},
+      create_datetime = #{createDatetime,jdbcType=TIMESTAMP},
+      update_datetime = #{updateDatetime,jdbcType=TIMESTAMP},
+      is_discuss = #{isDiscuss,jdbcType=INTEGER},
+      discuss_count = #{discussCount,jdbcType=INTEGER},
+      is_like = #{isLike,jdbcType=INTEGER},
+      like_count = #{likeCount,jdbcType=INTEGER},
+      content = #{content,jdbcType=LONGVARCHAR},
+        wcount = #{wcount,jdbcType=INTEGER}
+    where articleid = #{articleid,jdbcType=INTEGER}
+  </update>
+    <update id="updateByPrimaryKey" parameterType="com.zblog.model.Article">
+    update article
+    set author = #{author,jdbcType=INTEGER},
+      title = #{title,jdbcType=VARCHAR},
+      articletype = #{articletype,jdbcType=INTEGER},
+      create_datetime = #{createDatetime,jdbcType=TIMESTAMP},
+      update_datetime = #{updateDatetime,jdbcType=TIMESTAMP},
+      is_discuss = #{isDiscuss,jdbcType=INTEGER},
+      discuss_count = #{discussCount,jdbcType=INTEGER},
+      is_like = #{isLike,jdbcType=INTEGER},
+      like_count = #{likeCount,jdbcType=INTEGER}
+    where articleid = #{articleid,jdbcType=INTEGER}
+  </update>
+<!--阅读量累加-->
+    <update id="addWcount" parameterType="com.zblog.model.Article">
+        update article
+        set wcount =wcount+1
+        where articleid = #{articleid,jdbcType=INTEGER}
+    </update>
+</mapper>

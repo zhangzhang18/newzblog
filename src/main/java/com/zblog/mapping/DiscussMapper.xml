@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zblog.dao.DiscussMapper">
+    <resultMap id="BaseResultMap" type="com.zblog.model.Discuss">
+        <id column="discussid" jdbcType="INTEGER" property="discussid"/>
+        <result column="discuss_datetime" jdbcType="TIMESTAMP" property="discussDatetime"/>
+        <result column="vistor" jdbcType="INTEGER" property="vistor"/>
+        <result column="articleid" jdbcType="INTEGER" property="articleid"/>
+        <result column="reply" jdbcType="INTEGER" property="reply"/>
+        <result column="topic" jdbcType="VARCHAR" property="topic"/>
+        <result column="isshow" property="isshow" jdbcType="INTEGER"/>
+        <result column="replyuserid" property="reply_userid" jdbcType="INTEGER"/>
+        <result column="wcount" jdbcType="INTEGER" property="wcount"/>
+        <association property="user" javaType="com.zblog.model.User">
+            <id column="userid" property="userid" jdbcType="INTEGER"/>
+            <result column="username" property="username" jdbcType="VARCHAR"/>
+            <result column="email" property="email" jdbcType="VARCHAR"/>
+            <result column="nickname" property="nickname" jdbcType="VARCHAR"/>
+        </association>
+    </resultMap>
+    <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.zblog.model.Discuss">
+        <result column="discusscontent" jdbcType="LONGVARCHAR" property="discusscontent"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+    discussid, discuss_datetime,reply_userid, vistor, articleid, reply, topic, isshow,wcount,nickname,userid
+  </sql>
+    <sql id="Blob_Column_List">
+    discusscontent
+  </sql>
+    <!--首页讨论-->
+    <select id="SelectAllDiscuss" parameterType="java.lang.Integer" resultMap="ResultMapWithBLOBs">
+    select *
+    from discuss,user
+    WHERE discuss.vistor=user.userid  AND discuss.isshow=1 AND  discuss.discussid=discuss.reply  ORDER BY discuss_datetime LIMIT 6
+  </select>
+    <!--热门讨论-->
+    <select id="SelectHotDiscussByZcm" parameterType="java.lang.Integer" resultMap="ResultMapWithBLOBs">
+        select *
+        from discuss,user
+        WHERE discuss.vistor=user.userid  AND discuss.isshow=1 and discussid=reply ORDER BY wcount LIMIT 6
+    </select>
+    <!--首页讨论结束-->
+    <!--详情页-->
+    <!--讨论回复查询-->
+    <select id="SelectReplyById" parameterType="java.lang.Integer" resultMap="ResultMapWithBLOBs">
+        select *
+        from discuss,user
+        WHERE reply= #{reply,jdbcType=INTEGER}  AND discuss.isshow=1 AND discuss.reply_userid=user.userid ORDER BY discuss_datetime
+    </select>
+    <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        ,
+        <include refid="Blob_Column_List"/>
+        from discuss,user
+        where discussid = #{discussid,jdbcType=INTEGER} AND discuss.vistor=user.userid
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from discuss
+    where discussid = #{discussid,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="com.zblog.model.Discuss">
+    insert into discuss (discussid, discuss_datetime, vistor,
+    articleid, reply, topic,
+    isshow, discusscontent)
+    values (#{discussid,jdbcType=INTEGER}, #{discussDatetime,jdbcType=TIMESTAMP}, #{vistor,jdbcType=INTEGER},
+    #{articleid,jdbcType=INTEGER}, #{reply,jdbcType=INTEGER}, #{topic,jdbcType=VARCHAR},
+    #{isshow,jdbcType=INTEGER}, #{discusscontent,jdbcType=LONGVARCHAR})
+  </insert>
+    <insert id="insertSelective" parameterType="com.zblog.model.Discuss">
+        insert into discuss
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="discussid != null">
+                discussid,
+            </if>
+            <if test="discussDatetime != null">
+                discuss_datetime,
+            </if>
+            <if test="vistor != null">
+                vistor,
+            </if>
+            <if test="articleid != null">
+                articleid,
+            </if>
+            <if test="reply != null">
+                reply,
+            </if>
+            <if test="topic != null">
+                topic,
+            </if>
+            <if test="isshow != null">
+                isshow,
+            </if>
+            <if test="discusscontent != null">
+                discusscontent,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="discussid != null">
+                #{discussid,jdbcType=INTEGER},
+            </if>
+            <if test="discussDatetime != null">
+                #{discussDatetime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="vistor != null">
+                #{vistor,jdbcType=INTEGER},
+            </if>
+            <if test="articleid != null">
+                #{articleid,jdbcType=INTEGER},
+            </if>
+            <if test="reply != null">
+                #{reply,jdbcType=INTEGER},
+            </if>
+            <if test="topic != null">
+                #{topic,jdbcType=VARCHAR},
+            </if>
+            <if test="isshow != null">
+                #{isshow,jdbcType=INTEGER},
+            </if>
+            <if test="discusscontent != null">
+                #{discusscontent,jdbcType=LONGVARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.zblog.model.Discuss">
+        update discuss
+        <set>
+            <if test="discussDatetime != null">
+                discuss_datetime = #{discussDatetime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="vistor != null">
+                vistor = #{vistor,jdbcType=INTEGER},
+            </if>
+            <if test="articleid != null">
+                articleid = #{articleid,jdbcType=INTEGER},
+            </if>
+            <if test="reply != null">
+                reply = #{reply,jdbcType=INTEGER},
+            </if>
+            <if test="topic != null">
+                topic = #{topic,jdbcType=VARCHAR},
+            </if>
+            <if test="isshow != null">
+                isshow = #{isshow,jdbcType=INTEGER},
+            </if>
+            <if test="discusscontent != null">
+                discusscontent = #{discusscontent,jdbcType=LONGVARCHAR},
+            </if>
+        </set>
+        where discussid = #{discussid,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.zblog.model.Discuss">
+    update discuss
+    set discuss_datetime = #{discussDatetime,jdbcType=TIMESTAMP},
+    vistor = #{vistor,jdbcType=INTEGER},
+    articleid = #{articleid,jdbcType=INTEGER},
+    reply = #{reply,jdbcType=INTEGER},
+    topic = #{topic,jdbcType=VARCHAR},
+    isshow = #{isshow,jdbcType=INTEGER},
+    discusscontent = #{discusscontent,jdbcType=LONGVARCHAR}
+    where discussid = #{discussid,jdbcType=INTEGER}
+  </update>
+    <update id="updateByPrimaryKey" parameterType="com.zblog.model.Discuss">
+    update discuss
+    set discuss_datetime = #{discussDatetime,jdbcType=TIMESTAMP},
+      vistor = #{vistor,jdbcType=INTEGER},
+      articleid = #{articleid,jdbcType=INTEGER},
+      reply = #{reply,jdbcType=INTEGER},
+      topic = #{topic,jdbcType=VARCHAR},
+      isshow = #{isshow,jdbcType=INTEGER}
+    where discussid = #{discussid,jdbcType=INTEGER}
+  </update>
+    <!--阅读量累加-->
+    <update id="addWcount" parameterType="com.zblog.model.Discuss">
+        update discuss
+        set wcount =wcount+1
+      where discussid = #{discussid,jdbcType=INTEGER}
+    </update>
+</mapper>

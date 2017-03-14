@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zblog.dao.ArticleDiscussMapper" >
+  <resultMap id="BaseResultMap" type="com.zblog.model.ArticleDiscuss" >
+    <id column="discussid" property="discussid" jdbcType="INTEGER" />
+    <result column="articleid" property="articleid" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    discussid, articleid
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from article_discuss
+    where discussid = #{discussid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from article_discuss
+    where discussid = #{discussid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zblog.model.ArticleDiscuss" >
+    insert into article_discuss (discussid, articleid)
+    values (#{discussid,jdbcType=INTEGER}, #{articleid,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.zblog.model.ArticleDiscuss" >
+    insert into article_discuss
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="discussid != null" >
+        discussid,
+      </if>
+      <if test="articleid != null" >
+        articleid,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="discussid != null" >
+        #{discussid,jdbcType=INTEGER},
+      </if>
+      <if test="articleid != null" >
+        #{articleid,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zblog.model.ArticleDiscuss" >
+    update article_discuss
+    <set >
+      <if test="articleid != null" >
+        articleid = #{articleid,jdbcType=INTEGER},
+      </if>
+    </set>
+    where discussid = #{discussid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zblog.model.ArticleDiscuss" >
+    update article_discuss
+    set articleid = #{articleid,jdbcType=INTEGER}
+    where discussid = #{discussid,jdbcType=INTEGER}
+  </update>
+</mapper>

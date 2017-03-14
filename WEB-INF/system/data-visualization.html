@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <title>个人博客 Dashboard - Data Visualization</title>
+    <meta name="description" content="">
+
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/templatemo-style.css" rel="stylesheet">
+
+  </head>
+  <body>  
+    <!-- Left column -->
+    <div class="templatemo-flex-row">
+      <div class="templatemo-sidebar">
+        <header class="templatemo-site-header">
+          <div class="square"></div>
+          <h1>个人博客</h1>
+        </header>
+        <div class="profile-photo-container">
+          <img src="/images/personal.jpg" alt="Profile Photo" class="img-responsive">
+          <div class="profile-photo-overlay"></div>
+        </div>      
+        <!-- Search box -->
+        <form class="templatemo-search-form" role="search">
+          <div class="input-group">
+
+              <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">           
+          </div>
+        </form>
+        <div class="mobile-menu-icon">
+            <i class="fa fa-bars"></i>
+          </div>
+        <nav class="templatemo-left-nav">          
+          <ul>
+            <li><a href="#" class="active"><i class="fa fa-fw"></i>文章</a></li>
+            <li><a href="maps.html"><i class="fa fa-fw"></i>讨论</a></li>
+            <li><a href="preferences.html"><i class="fa fa-fw"></i>留言</a></li>
+            <li><a href="manage-users.html"><i class="fa fa-fw"></i>关于我</a></li>
+            <li><a href="welcome/login.html"><i class="fa fa-fw"></i>退出登录</a></li>
+          </ul>  
+        </nav>
+      </div>
+      <!-- Main content --> 
+      <div class="templatemo-content col-1 light-gray-bg">
+        <div class="templatemo-top-nav-container">
+          <div class="row">
+            <nav class="templatemo-top-nav col-lg-12 col-md-12">
+              <ul class="text-uppercase">
+                <li><a href="" class="active">Admin panel</a></li>
+                <li><a href="">Dashboard</a></li>
+                <li><a href="">Overview</a></li>
+                <li><a href="welcome/login.html">Sign in form</a></li>
+              </ul>  
+            </nav> 
+          </div>
+        </div>
+        <div class="templatemo-content-container">         
+          <div class="templatemo-content-widget white-bg">
+            <h2 class="margin-bottom-10">Data Visualization</h2>
+            <p>Credit goes to </p>
+            <div class="panel panel-default no-border">
+              <div class="panel-heading border-radius-10">
+                <h2>Gauge</h2>
+              </div>
+              <div class="panel-body">
+                <div class="templatemo-flex-row flex-content-row margin-bottom-30">
+                  <div class="col-1">
+                    <div id="gauge_div" class="templatemo-chart"></div>
+                    <h3 class="text-center margin-bottom-5">Computer Resources</h3>
+                    <p class="text-center">Curabitur</p>              
+                  </div>              
+                </div>     
+              </div>
+            </div>            
+            <div class="panel panel-default no-border">
+              <div class="panel-heading border-radius-10">
+                <h2>Timeline</h2>
+              </div>
+              <div class="panel-body">
+                <div class="templatemo-flex-row flex-content-row">
+                  <div class="col-1">
+                    <div id="timeline_div" class="templatemo-chart"></div>
+                    <h3 class="text-center margin-bottom-5">Conference Schedule</h3>
+                    <p class="text-center">Lorem Ipsum</p>                
+                  </div>              
+                </div>
+              </div> 
+            </div>
+            <div class="panel panel-default no-border">
+              <div class="panel-heading border-radius-10">
+                <h2>Area Chart</h2>
+              </div>
+              <div class="panel-body">
+                <div class="templatemo-flex-row flex-content-row">
+                  <div class="col-1">
+                    <div id="area_chart_div" class="templatemo-chart"></div>
+                    <h3 class="text-center margin-bottom-5">Company Performance</h3>
+                    <p class="text-center">Fusce mi lacus</p>                
+                  </div>              
+                </div>
+              </div> 
+            </div>
+          </div>
+          <footer class="text-right">
+            <p>Copyright &copy; 2084 Company Name 
+            | More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
+          </footer>         
+        </div>
+      </div>
+    </div>
+    
+    <!-- JS -->
+    <script type="text/javascript" src="/js/jquery-1.11.2.min.js"></script>      <!-- jQuery -->
+    <script type="text/javascript" src="/js/jquery-migrate-1.2.1.min.js"></script> <!--  jQuery Migrate Plugin -->
+    <script type="text/javascript" src="/js/templatemo-script.js"></script>      <!-- Templatemo Script -->
+  </body>
+</html>

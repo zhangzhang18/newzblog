@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zblog.dao.UserInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.zblog.model.UserInfo" >
+    <id column="userid" property="userid" jdbcType="INTEGER" />
+    <result column="age" property="age" jdbcType="INTEGER" />
+    <result column="sex" property="sex" jdbcType="VARCHAR" />
+    <result column="birthday" property="birthday" jdbcType="DATE" />
+    <result column="register_datetime" property="registerDatetime" jdbcType="TIMESTAMP" />
+    <result column="login_datetime" property="loginDatetime" jdbcType="TIMESTAMP" />
+    <result column="login_cont" property="loginCont" jdbcType="VARCHAR" />
+    <result column="user_photo" property="userPhoto" jdbcType="VARCHAR" />
+    <result column="image" property="image" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    userid, age, sex, birthday, register_datetime, login_datetime, login_cont, user_photo, 
+    image
+  </sql>
+
+  <select id="getUserById" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select
+    <include refid="Base_Column_List" />
+    from user_info
+    where userid = #{userid,jdbcType=INTEGER}
+  </select>
+
+
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from user_info
+    where userid = #{userid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from user_info
+    where userid = #{userid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zblog.model.UserInfo" >
+    insert into user_info (userid, age, sex, 
+      birthday, register_datetime, login_datetime, 
+      login_cont, user_photo, image
+      )
+    values (#{userid,jdbcType=INTEGER}, #{age,jdbcType=INTEGER}, #{sex,jdbcType=VARCHAR}, 
+      #{birthday,jdbcType=DATE}, #{registerDatetime,jdbcType=TIMESTAMP}, #{loginDatetime,jdbcType=TIMESTAMP}, 
+      #{loginCont,jdbcType=VARCHAR}, #{userPhoto,jdbcType=VARCHAR}, #{image,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.zblog.model.UserInfo" >
+    insert into user_info
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="userid != null" >
+        userid,
+      </if>
+      <if test="age != null" >
+        age,
+      </if>
+      <if test="sex != null" >
+        sex,
+      </if>
+      <if test="birthday != null" >
+        birthday,
+      </if>
+      <if test="registerDatetime != null" >
+        register_datetime,
+      </if>
+      <if test="loginDatetime != null" >
+        login_datetime,
+      </if>
+      <if test="loginCont != null" >
+        login_cont,
+      </if>
+      <if test="userPhoto != null" >
+        user_photo,
+      </if>
+      <if test="image != null" >
+        image,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="userid != null" >
+        #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="age != null" >
+        #{age,jdbcType=INTEGER},
+      </if>
+      <if test="sex != null" >
+        #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="birthday != null" >
+        #{birthday,jdbcType=DATE},
+      </if>
+      <if test="registerDatetime != null" >
+        #{registerDatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="loginDatetime != null" >
+        #{loginDatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="loginCont != null" >
+        #{loginCont,jdbcType=VARCHAR},
+      </if>
+      <if test="userPhoto != null" >
+        #{userPhoto,jdbcType=VARCHAR},
+      </if>
+      <if test="image != null" >
+        #{image,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zblog.model.UserInfo" >
+    update user_info
+    <set >
+      <if test="age != null" >
+        age = #{age,jdbcType=INTEGER},
+      </if>
+      <if test="sex != null" >
+        sex = #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="birthday != null" >
+        birthday = #{birthday,jdbcType=DATE},
+      </if>
+      <if test="registerDatetime != null" >
+        register_datetime = #{registerDatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="loginDatetime != null" >
+        login_datetime = #{loginDatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="loginCont != null" >
+        login_cont = #{loginCont,jdbcType=VARCHAR},
+      </if>
+      <if test="userPhoto != null" >
+        user_photo = #{userPhoto,jdbcType=VARCHAR},
+      </if>
+      <if test="image != null" >
+        image = #{image,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where userid = #{userid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zblog.model.UserInfo" >
+    update user_info
+    set age = #{age,jdbcType=INTEGER},
+      sex = #{sex,jdbcType=VARCHAR},
+      birthday = #{birthday,jdbcType=DATE},
+      register_datetime = #{registerDatetime,jdbcType=TIMESTAMP},
+      login_datetime = #{loginDatetime,jdbcType=TIMESTAMP},
+      login_cont = #{loginCont,jdbcType=VARCHAR},
+      user_photo = #{userPhoto,jdbcType=VARCHAR},
+      image = #{image,jdbcType=VARCHAR}
+    where userid = #{userid,jdbcType=INTEGER}
+  </update>
+</mapper>
