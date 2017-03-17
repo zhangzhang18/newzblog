@@ -1,11 +1,4 @@
 package com.zblog.common.page;
-
-/**
- * 
- * @author ray.wang
- * @date 2013-1-17 下午02:24:01
- * @DESC 简单分页类
- */
 public class SimplePage {
 
 	/**

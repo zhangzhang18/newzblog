@@ -1,6 +1,8 @@
 package com.zblog.service;
 
+import com.zblog.common.page.Pagination;
 import com.zblog.model.Article;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -29,4 +31,12 @@ public interface ArticleService {
     List<Article> SelectAllArticleByUId(Integer userid);
 
     int updateByPrimaryKey(Article article);
+
+    int deleteByPrimaryKey(int id);
+
+    List<Article> SelectNewArticleByUid(Integer userid);
+
+    List<Article> SelectHotArticleByUid(Integer userid);
+
+    Pagination getPagea(@Param("begin")int begin, @Param("end")int end, @Param("author")int  author);
 }

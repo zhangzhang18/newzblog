@@ -1,6 +1,8 @@
 package com.zblog.service;
 
+import com.zblog.common.page.Pagination;
 import com.zblog.model.Discuss;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -19,4 +21,8 @@ public interface DiscussService {
     int addWcount(Discuss discuss);
 
     int insert(Discuss discuss);
+
+    List<Discuss> SelectHotDiscussByUid(Integer userid);
+
+    Pagination getPage(@Param("begin")int begin, @Param("end")int end, @Param("vistor")int  vistor);
 }

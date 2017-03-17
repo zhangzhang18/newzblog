@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>张春萌--Article</title>
+    <meta name="description" content="">
+    <meta name="author" content="templatemo">
+
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/jqvmap/jqvmap.css" media="screen" rel="stylesheet" type="text../css"/>
+    <link href="/css/templatemo-style.css" rel="stylesheet">
+
+</head>
+<body>
+<!-- Left column -->
+<div class="templatemo-flex-row">
+    <div class="templatemo-sidebar">
+        <header class="templatemo-site-header">
+           <i class="fa fa-diamond fa-2x" aria-hidden="true"></i>
+            <a href="/welcome/index.do"><h1 class="media-heading text-uppercase">张春萌个人博客</h1></a>
+        </header>
+        <div class="profile-photo-container">
+            <img src="/images/personal.jpg" alt="Profile Photo" class="img-responsive">
+            <div class="profile-photo-overlay"></div>
+        </div>
+        <!-- Search box -->
+        <form class="templatemo-search-form" role="search">
+            <div class="input-group">
+                <button type="submit" class="fa fa-search"></button>
+                <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+            </div>
+        </form>
+        <div class="mobile-menu-icon">
+            <i class="fa fa-bars"></i>
+        </div>
+        <nav class="templatemo-left-nav">
+            <ul>
+                <li><a href="/welcome/article.do" class="active"><i class="fa fa-file-code-o" aria-hidden="true"></i>文章</a>
+                </li>
+                <li><a href="/welcome/discuss.do"><i class="
+				fa fa-list-alt fa-fw"></i>讨论</a></li>
+                <li><a href="/welcome/message.do"><i class="fa fa-th-list fa-fw"></i>留言</a></li>
+                <li><a href="/welcome/aboutme.do"><i class="fa fa-black-tie fa-fw"></i>关于我</a></li>
+                <#if Session.user?exists>
+                    <li><a href="/login/logout.do"><i class="fa fa-sign-out fa-fw"></i>退出登录</a></li>
+                    <#else>
+                        <li><a href="/welcome/login.do" target="_blank"><i class="fa fa-sign-in fa-fw"></i>注册/登录</a>
+                        </li>
+                </#if>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Main content -->
+    <div class="templatemo-content col-1 light-gray-bg">
+        <#if article?exists>
+            <div class="templatemo-top-nav-container">
+                <div class="row">
+                    <nav class="templatemo-top-nav col-lg-12 col-md-12">
+                        <ul class="text-uppercase">
+                            <#if (article.articletype=="1")>
+                                <li><a href="" class="active">Java</a></li>
+                            </#if>
+                            <#if (article.articletype=="2")>
+                                <li><a href="" class="active">Python</a></li>
+                            </#if>
+                            <#if (article.articletype=="3")>
+                                <li><a href="" class="active">Sql</a></li>
+                            </#if>
+                            <#if (article.articletype=="4")>
+                                <li><a href="" class="active">Ajax</a></li>
+                            </#if>
+                            <#if (article.articletype=="5")>
+                                <li><a href="" class="active">Html</a></li>
+                            </#if>
+                            <#if (article.articletype=="0")>
+                                <li><a href="" class="active">随笔</a></li>
+                            </#if>
+                            <#if Session.user?exists>
+                                <#if Session.user.userid==article.user.userid>
+                                <li> <a href="/article/updateArticle.do?articleid=${article.articleid}" id="update"><h3 class="btn btn-info" ><i class="fa fa-pencil fa-fw"></i>修改</h3></a></li>
+                                <li> <a href="/article/delete.do?articleid=${article.articleid}" id="delete"><h3 class="btn btn-danger" > <i class="fa fa-trash-o fa-lg"></i>删除</h3></a></li>
+                                </#if>
+                            </#if>
+
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="templatemo-flex-row flex-content-row">
+                <div class="col-1">
+                    <div class="templatemo-content-widget white-bg">
+                        <article>
+                            <header style="border-left: 8px solid #13895F;padding: 30px;"><h1 class="media-heading text-uppercase">${article.title}</h1>作者：${article.user.nickname}</header>
+                           <hr><br>
+                            <div><i class="fa fa-quote-left fa-3x fa-pull-left fa-border" aria-hidden="true"></i>
+                                <p>${article.content}</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </#if>
+        <footer class="text-right">
+            <footer class="text-right">
+                <p>Copyright &copy;ZCM</p>
+            </footer>
+        </footer>
+    </div>
+</div>
+<!-- JS -->
+<script type="text/javascript" src="/js/jquery-1.11.2.min.js"></script>      <!-- jQuery -->
+<script type="text/javascript" src="/js/jquery-migrate-1.2.1.min.js"></script> <!--  jQuery Migrate Plugin -->
+<script type="text/javascript" src="/js/templatemo-script.js"></script>      <!-- Templatemo Script -->
+<script type="text/javascript">
+    $('#delete').click(function() {
+        event.returnValue = confirm("删除是不可恢复的，你确认要删除吗？");
+    });
+    $('#update').click(function() {
+        event.returnValue = confirm("确认修改吗？");
+    });
+</script>
+</body>
+</html>

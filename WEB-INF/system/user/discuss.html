@@ -19,8 +19,8 @@
     <div class="templatemo-flex-row">
       <div class="templatemo-sidebar">
         <header class="templatemo-site-header">
-          <div class="square"></div>
-          <h1>${Session.user.username}个人博客</h1>
+         <i class="fa fa-diamond fa-2x" aria-hidden="true"></i>
+          <a href="/user/index.do"><h1 class="media-heading text-uppercase">${Session.user.username}个人博客</h1></a>
         </header>
         <div class="profile-photo-container">
           <img src="/images/personal.jpg" alt="Profile Photo" class="img-responsive">
@@ -38,11 +38,10 @@
           </div>
         <nav class="templatemo-left-nav">
           <ul>
-            <li><a href="/welcome/article.do"><i class="fa fa-fw"></i>文章</a></li>
+            <li><a href="/welcome/article.do"><i class="fa fa-fw"></i>我的文章</a></li>
             <li><a href="/welcome/discuss.do" class="active"><i class="
 				fa fa-fw"></i>讨论</a></li>
-            <li><a href="/welcome/message.do"><i class="fa fa-fw"></i>留言</a></li>
-            <li><a href="/welcome/aboutme.do"><i class="fa fa-fw"></i>关于我</a></li>
+            <li><a href="/message/myMessage.do"><i class="fa fa-fw"></i>我的留言</a></li>
             <#if Session.user?exists>
               <li><a href="/login/logout.do"><i class="fa fa-fw"></i>退出登录</a></li>
               <#else>

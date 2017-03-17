@@ -1,6 +1,7 @@
 package com.zblog.dao;
 
 import com.zblog.model.Article;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -36,4 +37,12 @@ public interface ArticleMapper {
     List<Article> SelectAllArticleByUId(Integer userid);
 
     Article SelectArticleById(Integer userid);
+
+    List<Article> SelectNewArticleByUid(Integer userid);
+
+    List<Article> SelectHotArticleByUid(Integer userid);
+
+    List<Article> getPage(@Param("begin")int begin, @Param("end") int end, @Param("author")int author);
+
+    int getCount(@Param("author")int author);
 }

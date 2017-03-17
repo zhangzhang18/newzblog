@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>张春萌--Article</title>
+    <title>${Session.user.username}--addDiscuss</title>
     <meta name="description" content="">
     <meta name="author" content="templatemo">
 
@@ -35,7 +35,7 @@
 <div class="templatemo-flex-row">
     <div class="templatemo-sidebar">
         <header class="templatemo-site-header">
-            <div class="square"></div>
+           <i class="fa fa-diamond fa-2x" aria-hidden="true"></i>
             <a href="/welcome/index.do"><h1 class="media-heading text-uppercase">张春萌个人博客</h1></a>
         </header>
         <div class="profile-photo-container">
@@ -54,15 +54,15 @@
         </div>
         <nav class="templatemo-left-nav">
             <ul>
-                <li><a href="/welcome/article.do"  class="active"><i class="fa fa-file-code-o" aria-hidden="true"></i>文章</a></li>
-                <li><a href="/welcome/discuss.do"><i class="
+                <li><a href="/welcome/article.do" ><i class="fa fa-file-code-o" aria-hidden="true"></i>文章</a></li>
+                <li><a href="/welcome/discuss.do"  class="active"><i class="
 				fa fa-list-alt fa-fw"></i>讨论</a></li>
                 <li><a href="/welcome/message.do" ><i class="fa fa-th-list fa-fw"></i>留言</a></li>
                 <li><a href="/welcome/aboutme.do"><i class="fa fa-black-tie fa-fw"></i>关于我</a></li>
                 <#if Session.user?exists>
                     <li><a href="/login/logout.do"><i class="fa fa-sign-out fa-fw"></i>退出登录</a></li>
                     <#else>
-                        <li><a href="/welcome/register.do" target="_blank"><i class="fa fa-sign-in fa-fw"></i>注册/登录</a></li>
+                        <li><a href="/welcome/login.do" target="_blank"><i class="fa fa-sign-in fa-fw"></i>注册/登录</a></li>
                 </#if>
             </ul>
         </nav>
@@ -77,22 +77,22 @@
                         <div class="panel panel-default margin-10">
                             <div class="panel-heading"><h2 class="text-uppercase">添加讨论</h2></div>
                             <div class="panel-body">
-                                <form action="/article/addArticle.do" class="templatemo-login-form" method="post">
+                                <form action="/discuss/addDiscuss.do" class="templatemo-login-form" method="post">
                                     <div class="row form-group">
                                         <div class="col-lg-6 has-success form-group">
-                                            <label class="control-label" for="titile">话题</label>
-                                            <input type="text" name="titie" class="form-control" id="titile">
+                                            <label class="control-label" for="topic">话题</label>
+                                            <input type="text" name="topic" class="form-control" id="topic">
                                         </div>
                                     </div>
                                     <div class="row form-group">
                                         <div class="col-lg-12 form-group">
-                                            <label class="control-label" for="content">内容</label>
-                                            <textarea style="width: 90%; height: 170px;" id="content"
-                                                      name="content"></textarea>
+                                            <label class="control-label" for="discusscontent">内容</label>
+                                            <textarea style="width: 90%; height: 170px;" id="discusscontent"
+                                                      name="discusscontent"></textarea>
                                         </div>
                                     </div>
-                                    <div class="row form-group">
-                                        <button type="submit" class="templatemo-blue-button">提交</button>
+                                    <div class="row form-group" style="margin-left: 20px">>
+                                        <button type="submit" class="templatemo-blue-button" style="margin-left: 20px">提交</button>
                                     </div>
                                 </form>
                             </div>
@@ -113,11 +113,11 @@
 <script type="text/javascript" src="/js/jquery-migrate-1.2.1.min.js"></script> <!--  jQuery Migrate Plugin -->
 <script type="text/javascript" src="/js/templatemo-script.js"></script>      <!-- Templatemo Script -->
 <script type="text/javascript">
-    var ue = UM.getEditor('questiondetail');
+    var ue = UM.getEditor('discusscontent');
     function getContent() {
         var workDetail = "";
         var arr = [];
-        arr.push(UM.getEditor('questiondetail').getContent());
+        arr.push(UM.getEditor('discusscontent').getContent());
         workDetail = arr.join("\n");
         return workDetail;
     }

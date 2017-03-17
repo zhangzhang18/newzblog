@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fun.dao.DiscussMapper" >
+  <resultMap id="BaseResultMap" type="com.fun.model.Discuss" >
+    <id column="discussid" property="discussid" jdbcType="INTEGER" />
+    <id column="vistor" property="vistor" jdbcType="INTEGER" />
+    <id column="articleid" property="articleid" jdbcType="INTEGER" />
+    <result column="discuss_datetime" property="discussDatetime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.fun.model.Discuss" extends="BaseResultMap" >
+    <result column="discusscontent" property="discusscontent" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    discussid, vistor, articleid, discuss_datetime
+  </sql>
+  <sql id="Blob_Column_List" >
+    discusscontent
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="com.fun.model.DiscussKey" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from discuss
+    where discussid = #{discussid,jdbcType=INTEGER}
+      and vistor = #{vistor,jdbcType=INTEGER}
+      and articleid = #{articleid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.fun.model.DiscussKey" >
+    delete from discuss
+    where discussid = #{discussid,jdbcType=INTEGER}
+      and vistor = #{vistor,jdbcType=INTEGER}
+      and articleid = #{articleid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.fun.model.Discuss" >
+    insert into discuss (discussid, vistor, articleid, 
+      discuss_datetime, discusscontent)
+    values (#{discussid,jdbcType=INTEGER}, #{vistor,jdbcType=INTEGER}, #{articleid,jdbcType=INTEGER}, 
+      #{discussDatetime,jdbcType=TIMESTAMP}, #{discusscontent,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.fun.model.Discuss" >
+    insert into discuss
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="discussid != null" >
+        discussid,
+      </if>
+      <if test="vistor != null" >
+        vistor,
+      </if>
+      <if test="articleid != null" >
+        articleid,
+      </if>
+      <if test="discussDatetime != null" >
+        discuss_datetime,
+      </if>
+      <if test="discusscontent != null" >
+        discusscontent,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="discussid != null" >
+        #{discussid,jdbcType=INTEGER},
+      </if>
+      <if test="vistor != null" >
+        #{vistor,jdbcType=INTEGER},
+      </if>
+      <if test="articleid != null" >
+        #{articleid,jdbcType=INTEGER},
+      </if>
+      <if test="discussDatetime != null" >
+        #{discussDatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="discusscontent != null" >
+        #{discusscontent,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.fun.model.Discuss" >
+    update discuss
+    <set >
+      <if test="discussDatetime != null" >
+        discuss_datetime = #{discussDatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="discusscontent != null" >
+        discusscontent = #{discusscontent,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where discussid = #{discussid,jdbcType=INTEGER}
+      and vistor = #{vistor,jdbcType=INTEGER}
+      and articleid = #{articleid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.fun.model.Discuss" >
+    update discuss
+    set discuss_datetime = #{discussDatetime,jdbcType=TIMESTAMP},
+      discusscontent = #{discusscontent,jdbcType=LONGVARCHAR}
+    where discussid = #{discussid,jdbcType=INTEGER}
+      and vistor = #{vistor,jdbcType=INTEGER}
+      and articleid = #{articleid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.fun.model.Discuss" >
+    update discuss
+    set discuss_datetime = #{discussDatetime,jdbcType=TIMESTAMP}
+    where discussid = #{discussid,jdbcType=INTEGER}
+      and vistor = #{vistor,jdbcType=INTEGER}
+      and articleid = #{articleid,jdbcType=INTEGER}
+  </update>
+</mapper>

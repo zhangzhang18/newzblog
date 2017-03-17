@@ -14,6 +14,17 @@ public class Message {
     private Date datetime;
 
     private Integer isshow;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    private String name;
+
     private User user;
 
     public User getUser() {

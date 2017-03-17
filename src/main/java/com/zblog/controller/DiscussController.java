@@ -33,17 +33,30 @@ public class DiscussController {
     }
 
     @RequestMapping(value = "/addDiscuss.do", method = RequestMethod.POST)
-    public ModelAndView adddiscuss(Discuss discuss, HttpServletRequest request, HttpServletResponse response) {
+    public String adddiscuss(Discuss discuss, HttpServletRequest request, HttpServletResponse response) {
         User nowuser = UserUtil.getUser(request);
         if (nowuser != null) {
             discuss.setVistor(nowuser.getUserid());
             discuss.setDiscussDatetime(new Date());
+            discuss.setIsshow(1);
             discussService.insert(discuss);
-            ModelAndView mav = new ModelAndView("discuss/adddiscuss");
-            return mav;
+            return "redirect:/welcome/discuss.do";
         }else {
-            ModelAndView mav = new ModelAndView("welcome/login");
-            return mav;
+            return "redirect:/welcome/login.do";
+        }
+    }
+    @RequestMapping(value = "/addReply.do", method = RequestMethod.POST)
+    public String addreply(Discuss discuss, HttpServletRequest request, HttpServletResponse response) {
+        User nowuser = UserUtil.getUser(request);
+        String id=request.getParameter("discussid");
+        if (nowuser != null) {
+            discuss.setReply(Integer.parseInt(id));
+            discuss.setRelpyuserid(nowuser.getUserid());
+            discuss.setDiscussDatetime(new Date());
+            discussService.insert(discuss);
+            return "redirect:/welcome/discussdetail.do";
+        }else {
+            return "redirect:/welcome/login.do";
         }
     }
 }

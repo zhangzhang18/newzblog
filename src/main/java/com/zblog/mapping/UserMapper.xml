@@ -99,6 +99,6 @@
   </select>
 
   <select id="getUserPWDByUsername"  parameterType="java.lang.String" resultMap="BaseResultMap">
-    SELECT * FROM user WHERE username=#{username,jdbcType=VARCHAR}
+    SELECT * FROM user WHERE username=#{username,jdbcType=VARCHAR} OR  email = #{email,jdbcType=VARCHAR}
   </select>
 </mapper>

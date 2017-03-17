@@ -1,6 +1,7 @@
 package com.zblog.dao;
 
 import com.zblog.model.Discuss;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -28,4 +29,10 @@ public interface DiscussMapper {
     List<Discuss> SelectReplyById(int id);
 
     int addWcount(Discuss discuss);
+
+    List<Discuss> SelectHotDiscussByUid(Integer userid);
+
+    List<Discuss> getPage(@Param("begin")int begin, @Param("end") int end, @Param("vistor")int vistor);
+
+    int getCount(@Param("vistor")int vistor);
 }

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fun.dao.UserArticleMapper" >
+  <resultMap id="BaseResultMap" type="com.fun.model.UserArticleKey" >
+    <id column="userid" property="userid" jdbcType="INTEGER" />
+    <id column="articleid" property="articleid" jdbcType="INTEGER" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="com.fun.model.UserArticleKey" >
+    delete from user_article
+    where userid = #{userid,jdbcType=INTEGER}
+      and articleid = #{articleid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.fun.model.UserArticleKey" >
+    insert into user_article (userid, articleid)
+    values (#{userid,jdbcType=INTEGER}, #{articleid,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.fun.model.UserArticleKey" >
+    insert into user_article
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="userid != null" >
+        userid,
+      </if>
+      <if test="articleid != null" >
+        articleid,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="userid != null" >
+        #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="articleid != null" >
+        #{articleid,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+</mapper>

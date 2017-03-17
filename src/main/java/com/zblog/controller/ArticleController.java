@@ -1,12 +1,15 @@
 package com.zblog.controller;
 
+import com.zblog.common.page.Pagination;
+import com.zblog.common.page.SimplePage;
 import com.zblog.model.Article;
 import com.zblog.model.User;
 import com.zblog.service.ArticleService;
-import com.zblog.util.DateUtil;
+import com.zblog.util.Constants;
 import com.zblog.util.UserUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -47,33 +50,30 @@ public class ArticleController {
         return mav;
     }
     @RequestMapping(value = "/addArticle.do",method = RequestMethod.POST)
-    public ModelAndView addArticle(Article article,HttpServletRequest request, HttpServletResponse response){
+    public String addArticle(Article article,HttpServletRequest request, HttpServletResponse response){
         User nowuser  = UserUtil.getUser(request);
         if(nowuser!=null) {
             article.setCreateDatetime(new Date());
             article.setAuthor(nowuser.getUserid());
+            article.setWcount(0);
             int result = articleService.insert(article);
-            List<Article> articleList = articleService.SelectArticleByZcm();
-            ModelAndView mav = new ModelAndView("article/myarticle");
-            mav.addObject("articleList", articleList);
-            return mav;
+            return "redirect:/article/article.do";
         }else {
             ModelAndView mav = new ModelAndView("welcome/login");
-            return mav;
+            return "redirect:/welcome/login.do";
         }
 
     }
-    @RequestMapping("/myArticle.do")
-    public ModelAndView add(HttpServletRequest request, HttpServletResponse response){
+    @RequestMapping("/article.do")
+    public String add(HttpServletRequest request, HttpServletResponse response,Integer pageNo,ModelMap modelMap){
         User nowuser  = UserUtil.getUser(request);
         if(nowuser!=null) {
-            List<Article> articleList = articleService.SelectAllArticleByUId(nowuser.getUserid());
-            ModelAndView mav = new ModelAndView("article/myarticle");
-            mav.addObject("articleList", articleList);
-            return mav;
+            Pagination pagination = this.articleService.getPagea(
+                    SimplePage.cpn(pageNo), Constants.PAGE_SIZE, nowuser.getUserid());
+            modelMap.addAttribute("pagination",pagination);
+            return "article/article";
         }else {
-            ModelAndView mav = new ModelAndView("welcome/login");
-            return mav;
+            return "redirect:/welcome/login.do";
         }
     }
     @RequestMapping("/updateArticle.do")
@@ -81,9 +81,9 @@ public class ArticleController {
         User nowuser  = UserUtil.getUser(request);
         String id=request.getParameter("articleid");
         if(nowuser!=null) {
-            Article articles = articleService.SelectArticleById(Integer.parseInt(id));
+            Article article = articleService.selectByPrimaryKey(Integer.parseInt(id));
             ModelAndView mav = new ModelAndView("article/updatearticle");
-            mav.addObject("articles", articles);
+            mav.addObject("article", article);
             return mav;
         }else {
             ModelAndView mav = new ModelAndView("welcome/login");
@@ -91,17 +91,26 @@ public class ArticleController {
         }
     }
     @RequestMapping(value = "/updateArticle.do",method = RequestMethod.POST)
-    public ModelAndView updatepost(Article article,HttpServletRequest request, HttpServletResponse response){
+    public String updatepost(Article article,HttpServletRequest request, HttpServletResponse response){
+        User nowuser  = UserUtil.getUser(request);
+        if(nowuser!=null) {
+            article.setUpdateDatetime(new Date());
+           int i= articleService.updateByPrimaryKey(article);
+            return "redirect:/article/article.do";
+        }else {
+            return "redirect:/welcome/login.do";
+        }
+    }
+
+    @RequestMapping("/delete.do")
+    public String delete(HttpServletRequest request, HttpServletResponse response){
         User nowuser  = UserUtil.getUser(request);
         String id=request.getParameter("articleid");
         if(nowuser!=null) {
-            article.setCreateDatetime(new Date());
-           int i= articleService.updateByPrimaryKey(article);
-            ModelAndView mav = new ModelAndView("article/myarticle");
-            return mav;
+            articleService.deleteByPrimaryKey(Integer.parseInt(id));
+            return "redirect:/article/article.do";
         }else {
-            ModelAndView mav = new ModelAndView("welcome/login");
-            return mav;
+            return "redirect:/welcome/login.do";
         }
     }
 }

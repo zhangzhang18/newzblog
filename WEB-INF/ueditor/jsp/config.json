@@ -1,8 +1,8 @@
 /* 前后端通信相关的配置,注释只允许使用多行方式 */
 {
     /* 上传图片配置项 */
-    "imageActionName": "uploadimage", /* 执行上传图片的action名称 */
-    "imageFieldName": "upfile", /* 提交的图片表单名称 */
+    "imageActionName": "/common/uploadImg.do", /* 执行上传图片的action名称 */
+    "imageFieldName": "form", /* 提交的图片表单名称 */
     "imageMaxSize": 2048000, /* 上传大小限制，单位B */
     "imageAllowFiles": [".png", ".jpg", ".jpeg", ".gif", ".bmp"], /* 上传图片格式显示 */
     "imageCompressEnable": true, /* 是否压缩图片,默认是true */
@@ -32,7 +32,7 @@
     "scrawlInsertAlign": "none",
 
     /* 截图工具上传 */
-    "snapscreenActionName": "uploadimage", /* 执行上传截图的action名称 */
+    "snapscreenActionName": "/common/uploadImg.do", /* 执行上传截图的action名称 */
     "snapscreenPathFormat": "/ueditor/jsp/upload/image/{yyyy}{mm}{dd}/{time}{rand:6}", /* 上传保存路径,可以自定义保存路径和文件名格式 */
     "snapscreenUrlPrefix": "", /* 图片访问路径前缀 */
     "snapscreenInsertAlign": "none", /* 插入的图片浮动方式 */
@@ -57,8 +57,8 @@
         ".ogg", ".ogv", ".mov", ".wmv", ".mp4", ".webm", ".mp3", ".wav", ".mid"], /* 上传视频格式显示 */
 
     /* 上传文件配置 */
-    "fileActionName": "uploadfile", /* controller里,执行上传视频的action名称 */
-    "fileFieldName": "upfile", /* 提交的文件表单名称 */
+    "fileActionName": "/common/uploadImg.do", /* controller里,执行上传视频的action名称 */
+    "fileFieldName": "form", /* 提交的文件表单名称 */
     "filePathFormat": "/ueditor/jsp/upload/file/{yyyy}{mm}{dd}/{time}{rand:6}", /* 上传保存路径,可以自定义保存路径和文件名格式 */
     "fileUrlPrefix": "", /* 文件访问路径前缀 */
     "fileMaxSize": 51200000, /* 上传大小限制，单位B，默认50MB */

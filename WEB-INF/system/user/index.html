@@ -18,8 +18,8 @@
 <div class="templatemo-flex-row">
     <div class="templatemo-sidebar">
         <header class="templatemo-site-header">
-            <div class="square"></div>
-            <a href="/welcome/index.do"><h1 class="media-heading text-uppercase">${Session.user.username}的博客</h1></a>
+           <i class="fa fa-diamond fa-2x" aria-hidden="true"></i>
+            <a href="/user/index.do"><h1 class="media-heading text-uppercase">${Session.user.username}个人博客</h1></a>
         </header>
         <div class="profile-photo-container">
             <img src="/images/personal.jpg" alt="Profile Photo" class="img-responsive">
@@ -37,14 +37,14 @@
         </div>
         <nav class="templatemo-left-nav">
             <ul>
-                <li><a href="/article/myArticle.do"><i class="fa fa-file-code-o" aria-hidden="true"></i>我的文章</a></li>
+                <li><a href="/article/article.do"><i class="fa fa-file-code-o" aria-hidden="true"></i>我的文章</a></li>
                 <li><a href="/welcome/discuss.do"><i class="
 				fa fa-list-alt fa-fw"></i>讨论</a></li>
-                <li><a href="/welcome/message.do"><i class="fa fa-th-list fa-fw"></i>留言</a></li>
+                <li><a href="/message/myMessage.do"><i我的 class="fa fa-th-list fa-fw"></i我的>留言</a></li>
                 <#if Session.user?exists>
                     <li><a href="/login/logout.do"><i class="fa fa-sign-out fa-fw"></i>退出登录</a></li>
                     <#else>
-                        <li><a href="/welcome/register.do" target="_blank"><i class="fa fa-sign-in fa-fw"></i>注册/登录</a>
+                        <li><a href="/welcome/login.do" target="_blank"><i class="fa fa-sign-in fa-fw"></i>注册/登录</a>
                         </li>
                 </#if>
             </ul>
@@ -54,45 +54,6 @@
     <div class="templatemo-content col-1 light-gray-bg">
         <div class="templatemo-content-container">
             <div class="templatemo-flex-row flex-content-row">
-                <div class="templatemo-content-widget white-bg col-2">
-                    <i class="fa"></i>
-                    <div class="square"></div>
-                    <h2 class="templatemo-inline-block">JAVA开发工程师</h2>
-                    <hr>
-                    <p style="line-height: 25px;">熟练掌握JavaSE基础和JavaEE技术规范（JSP , Servlet，JDBC等） <br>
-                        熟悉JavaEE流行框架Spring，Mybatis，Maven。以及SVN,GIT工具使用。<br>
-                        熟悉HTML，CSS，JS，JQuery，AJAX，XML的简单功能和基于JSON数据格式的交换。<br>
-                        熟悉Python，了解 Django简单配置，爬虫相关模块。 熟悉Mysql，SQLServer，Mongodb。<br></p>
-                </div>
-                <div class="templatemo-content-widget white-bg col-1">
-                    <i class="fa"></i>
-                    <h2 class="text-uppercase">技能水平</h2>
-                    <hr>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="70"
-                             aria-valuemin="0" aria-valuemax="100" style="width: 80%;"><span
-                                style="top:0;left:0;font-size:11px;color:#fff;text-transform:capitalize;">Java</span>
-                        </div>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60"
-                             aria-valuemin="0" aria-valuemax="100" style="width: 70%;"><span
-                                style="top:0;left:0;font-size:11px;color:#fff;text-transform:capitalize;">Mysql</span>
-                        </div>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60"
-                             aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><span
-                                style="top:0;left:0;font-size:11px;color:#fff;text-transform:capitalize;">Python</span>
-                        </div>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60"
-                             aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><span
-                                style="top:0;left:0;font-size:11px;color:#fff;text-transform:capitalize;">Ajax</span>
-                        </div>
-                    </div>
-                </div>
             </div>
             <div class="templatemo-flex-row flex-content-row">
                 <div class="col-1">
@@ -137,7 +98,7 @@
                 <div class="col-1">
                     <div class="panel-default margin-10"
                          style="border: 1px solid #d7d7d7;border-radius: 10px;padding-top: 20px;">
-                        <h2 class="col-1 text-center">最热文章<span class="badge">hot</span></h2>
+                        <h2 class="col-1 text-center">我的最热文章<span class="badge">hot</span></h2>
                         <hr>
                         <div class="templatemo-chart margin-10"style=" padding: 20px;">
                             <ol>
@@ -160,7 +121,7 @@
                 <div class="col-1">
                     <div class="panel-default margin-10"
                          style="border: 1px solid #d7d7d7;border-radius: 10px;padding-top: 20px;">
-                        <h2 class="col-1 text-center">最热讨论<span class="badge">hot</span></h2>
+                        <h2 class="col-1 text-center">我的最热讨论<span class="badge">hot</span></h2>
                         <hr>
                         <div class="templatemo-chart margin-10" style=" padding: 20px;">
                             <ol>

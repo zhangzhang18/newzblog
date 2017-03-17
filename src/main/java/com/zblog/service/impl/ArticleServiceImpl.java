@@ -1,8 +1,12 @@
 package com.zblog.service.impl;
 
+import com.zblog.common.page.Pagination;
 import com.zblog.dao.ArticleMapper;
 import com.zblog.model.Article;
 import com.zblog.service.ArticleService;
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.logging.Log;
+import org.apache.ibatis.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +17,7 @@ import java.util.List;
  */
 @Service("ArticleService")
 public class ArticleServiceImpl implements ArticleService {
-
+    protected static final Log log = LogFactory.getLog(ArticleServiceImpl.class);
     @Autowired
     ArticleMapper articleMapper;
 
@@ -60,4 +64,31 @@ public class ArticleServiceImpl implements ArticleService {
     public int updateByPrimaryKey(Article article) {
         return articleMapper.updateByPrimaryKey(article);
     }
+
+    public int deleteByPrimaryKey(int id) {
+        return articleMapper.deleteByPrimaryKey(id);
+    }
+
+    public List<Article> SelectNewArticleByUid(Integer userid) {
+        return articleMapper.SelectNewArticleByUid( userid);
+    }
+
+    public List<Article> SelectHotArticleByUid(Integer userid) {
+        return articleMapper.SelectHotArticleByUid(userid);
+    }
+
+    public Pagination getPagea( int pageNo,   int pageSize,  int author) {
+        int total = 0;
+        Pagination pagination = null;
+        List<Article> users = null;
+        ArticleServiceImpl.log.debug("receive:pageNo=" + pageNo + " pageSize="
+                + pageSize);
+        int begin = (pageNo - 1) * pageSize;
+        int end = begin + pageSize;
+        users = this.articleMapper.getPage(begin, end, author);
+        total = this.articleMapper.getCount(author);
+        pagination = new Pagination(pageNo, pageSize, total, users);
+        return pagination;
+    }
+
 }

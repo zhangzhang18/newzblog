@@ -46,7 +46,31 @@
     <select id="SelectReplyById" parameterType="java.lang.Integer" resultMap="ResultMapWithBLOBs">
         select *
         from discuss,user
-        WHERE reply= #{reply,jdbcType=INTEGER}  AND discuss.isshow=1 AND discuss.reply_userid=user.userid ORDER BY discuss_datetime
+        WHERE reply= #{reply,jdbcType=INTEGER}  AND discuss.isshow=1 AND discuss.reply_userid=user.userid ORDER BY discuss_datetime LIMIT 6
+    </select>
+    <!--用户最热讨论-->
+    <select id="SelectHotDiscussByUid" parameterType="java.lang.Integer" resultMap="ResultMapWithBLOBs">
+        select *
+        from discuss,user
+        WHERE   vistor = #{vistor,jdbcType=INTEGER} AND discuss.vistor=user.userid  AND discuss.isshow=1 and discussid=reply ORDER BY wcount LIMIT 6
+    </select>
+    <!--分页 -->
+    <select id="getPage" parameterType="map" resultMap="ResultMapWithBLOBs">
+        SELECT * FROM discuss,user
+        <if test="vistor != null">
+            where  vistor = #{vistor,jdbcType=INTEGER} AND discuss.vistor=user.userid
+        </if>
+        ORDER BY discuss_datetime
+        <if test="begin != null">
+            LIMIT #{begin},10
+        </if>
+    </select>
+    <select id="getCount" parameterType="java.lang.Integer"
+            resultType="java.lang.Integer">
+        select count(*) from discuss
+        <if test="vistor != null">
+            where vistor = #{vistor,jdbcType=INTEGER}
+        </if>
     </select>
     <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer">
         select

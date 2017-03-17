@@ -18,7 +18,7 @@
 <div class="templatemo-flex-row">
     <div class="templatemo-sidebar">
         <header class="templatemo-site-header">
-            <div class="square"></div>
+           <i class="fa fa-diamond fa-2x" aria-hidden="true"></i>
             <a href="/welcome/index.do"><h1 class="media-heading text-uppercase">张春萌个人博客</h1></a>
         </header>
         <div class="profile-photo-container">
@@ -47,7 +47,7 @@
                 <#if Session.user?exists>
                     <li><a href="/login/logout.do"><i class="fa fa-sign-out fa-fw"></i>退出登录</a></li>
                     <#else>
-                        <li><a href="/welcome/register.do" target="_blank"><i class="fa fa-sign-in fa-fw"></i>注册/登录</a>
+                        <li><a href="/welcome/login.do" target="_blank"><i class="fa fa-sign-in fa-fw"></i>注册/登录</a>
                         </li>
                 </#if>
             </ul>
@@ -82,42 +82,39 @@
                 <p class="table-responsive">
                 <table class="table">
                     <tbody>
-                    <#if messageList?exists>
-                        <#list messageList as message>
-                            <#if (message.isshow=="1")>
-                                <tr>
-                                    <td width="20%">
-                                        <div class="circle blue-bg ">
-                                            <h3 class="text-uppercase">&nbsp;&nbsp;&nbsp;&nbsp;${message.datetime?string("yyyy-MM-dd HH:mm:ss
-                                                ")}</h3>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="templatemo-content-widget blue-bg">
+                    <#if pagination?exists>
+                        <#assign list = pagination.list >
+                            <#if  list?exists>
+                                <#if (list?size >0)>
+                                    <#list list as message >
+                                        <#if (message.isshow=="1")>
+                                            <tr>
+                                                <td><div>
+                                                    <div  class="circle blue-bg "></div>
+                                                        <h3>${message.datetime?string("yyyy-MM-dd ")}<br>
+                                                            ${message.datetime?string("HH:mm:ss")}</h3>
+                                                   </div>
+                                                </td>
+                                                <td>
+                                                    <div class="templatemo-content-widget blue-bg">
 
-                                            <i class="fa"></i>
-                                            <h2 class="text-uppercase margin-bottom-10">${message.content}</h2>
-                                        </div>
-                                    </td>
-                                </tr>
+                                                        <i class="fa"></i>
+                                                        <h2 class="text-uppercase margin-bottom-10">
+                                                            ${message.content}</h2>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </#if>
+                                    </#list>
+                                </#if>
                             </#if>
-                        </#list>
                     </#if>
                 </table>
-                <div class="pagination-wrap">
-                    <ul class="pagination">
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li class="active"><a href="#">3 <span class="sr-only">(current)</span></a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li>
-                            <a href="#" aria-label="Next">
-                                <span aria-hidden="true"><i class="fa "></i></span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+            </div>
+        </div>
+        <div class="pagination-wrap">
+            <div style="margin-bottom: auto">
+                <#include "/include/pagination-3.html" />
             </div>
         </div>
         <div class="templatemo-flex-row flex-content-row">
@@ -125,14 +122,20 @@
                 <div class="panel panel-default margin-10">
                     <div class="panel-heading"><h2 class="text-uppercase">给我留言吧</h2></div>
                     <div class="panel-body">
-                        <form action="index.html" class="templatemo-login-form">
+                        <form action="/message/addMessage.do" class="templatemo-login-form" method="post">
                             <div class="row form-group">
-                                <div class="col-lg-12 form-group">
-                                    <textarea class="form-control" id="inputNote" rows="3"></textarea>
+                                <div class="col-lg-6 has-success form-group">
+                                    <label class="control-label" for="name">名字</label>
+                                    <input type="text" name="name" class="form-control" id="name">
                                 </div>
                             </div>
                             <div class="row form-group">
-                                <button type="submit" class="templatemo-blue-button">提交</button>
+                                <div class="col-lg-12 form-group">
+                                    <textarea class="form-control" id="content" rows="3"></textarea>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <button type="submit" style="margin-left: 20px;" class="templatemo-blue-button">提交</button>
                             </div>
                         </form>
                     </div>

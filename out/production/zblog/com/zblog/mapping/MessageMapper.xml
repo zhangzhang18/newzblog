@@ -8,6 +8,7 @@
     <result column="touserid" property="touserid" jdbcType="INTEGER" />
     <result column="datetime" property="datetime" jdbcType="TIMESTAMP" />
     <result column="isshow" property="isshow" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
     <association property="user" javaType="com.zblog.model.User">
       <id column="userid" property="userid" jdbcType="INTEGER" />
       <result column="username" property="username" jdbcType="VARCHAR" />
@@ -16,7 +17,7 @@
     </association>
   </resultMap>
   <sql id="Base_Column_List" >
-    id, content, fromuserid, touserid, datetime, isshow
+    id, content, fromuserid, touserid, datetime, isshow,name
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
@@ -24,11 +25,28 @@
     from message
     where id = #{id,jdbcType=INTEGER}
   </select>
-
+<!--首页查询所有留言-->
   <select id="SelectAllMessage" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select *
     from message,user
     where message.id =user.userid AND message.touserid=0 AND isshow=1 ORDER BY datetime LIMIT 6
+  </select>
+  <!--分页 -->
+  <select id="getPage" parameterType="map" resultMap="BaseResultMap">
+    SELECT * FROM message,user
+    <if test="touserid != null">
+      where  touserid = #{touserid,jdbcType=INTEGER} AND message.fromuserid=user.userid
+    </if>
+    <if test="begin != null">
+      LIMIT #{begin},10
+    </if>
+  </select>
+  <select id="getCount" parameterType="java.lang.Integer"
+          resultType="java.lang.Integer">
+    select count(*) from message
+    <if test="touserid != null">
+      where touserid = #{touserid,jdbcType=INTEGER}
+    </if>
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from message
@@ -36,7 +54,7 @@
   </delete>
   <insert id="insert" parameterType="com.zblog.model.Message" >
     insert into message (id, content, fromuserid, 
-      touserid, datetime, isshow
+      touserid, datetime, isshow,name
       )
     values (#{id,jdbcType=INTEGER}, #{content,jdbcType=VARCHAR}, #{fromuserid,jdbcType=INTEGER}, 
       #{touserid,jdbcType=INTEGER}, #{datetime,jdbcType=TIMESTAMP}, #{isshow,jdbcType=INTEGER}

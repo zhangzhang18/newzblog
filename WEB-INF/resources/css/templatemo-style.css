@@ -82,6 +82,19 @@ footer { padding: 15px; }
 /* 2. Left Column
 -----------------------------*/
 .templatemo-sidebar { width: 300px; }
+.error-btn a {
+	font-size: 0.9em;
+	padding: 9px 10px;
+}
+.error {
+	padding:5em 0;
+}
+.error-top h3 {
+	font-size: 4em;
+}
+.error-top p {
+	font-size: 1.2em;
+}
 .square {
 	width: 25px;
 	height: 25px;

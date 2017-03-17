@@ -4,7 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>${Session.user.username}-Article</title>
+    <#if Session.user?exists>
+        <title> ${Session.user.username}--Article</title>
+        <#else>
+            <title>Article</title>
+    </#if>
     <meta name="description" content="">
     <meta name="author" content="templatemo">
 
@@ -34,8 +38,8 @@
 <div class="templatemo-flex-row">
     <div class="templatemo-sidebar">
         <header class="templatemo-site-header">
-            <div class="square"></div>
-            <a href="/welcome/index.do"><h1 class="media-heading text-uppercase">张春萌个人博客</h1></a>
+           <i class="fa fa-diamond fa-2x" aria-hidden="true"></i>
+            <a href="/welcome/index.do"><h1 class="media-heading text-uppercase">${Session.user.username}个人博客</h1></a>
         </header>
         <div class="profile-photo-container">
             <img src="/images/personal.jpg" alt="Profile Photo" class="img-responsive">
@@ -53,16 +57,16 @@
         </div>
         <nav class="templatemo-left-nav">
             <ul>
-                <li><a href="/article/myArticle.do" class="active"><i class="fa fa-file-code-o" aria-hidden="true"></i>我的文章</a>
+                <li><a href="/article/article.do" class="active"><i class="fa fa-file-code-o" aria-hidden="true"></i>我的文章</a>
                 </li>
                 <li><a href="/welcome/discuss.do"><i class="
 				fa fa-list-alt fa-fw"></i>讨论</a></li>
-                <li><a href="/welcome/message.do"><i class="fa fa-th-list fa-fw"></i>留言</a></li>
+                <li><a href="/message/myMessage.do"><i class="fa fa-th-list fa-fw"></i>我的留言</a></li>
                 <li><a href="/welcome/aboutme.do"><i class="fa fa-black-tie fa-fw"></i>关于我</a></li>
                 <#if Session.user?exists>
                     <li><a href="/login/logout.do"><i class="fa fa-sign-out fa-fw"></i>退出登录</a></li>
                     <#else>
-                        <li><a href="/welcome/register.do" target="_blank"><i class="fa fa-sign-in fa-fw"></i>注册/登录</a>
+                        <li><a href="/welcome/login.do" target="_blank"><i class="fa fa-sign-in fa-fw"></i>注册/登录</a>
                         </li>
                 </#if>
             </ul>
@@ -78,12 +82,12 @@
                         <div class="panel panel-default margin-10">
                             <div class="panel-heading"><h2 class="text-uppercase">修改文章</h2></div>
                             <div class="panel-body">
-                                <form action="/article/addArticle.do" class="templatemo-login-form" method="post">
+                                <form action="/article/updateArticle.do" class="templatemo-login-form" method="post" name="form">
                                     <div class="row form-group">
                                         <div class="col-lg-6 has-success form-group">
-                                            <label class="control-label" for="titile">标题</label>
-                                            <input type="text" name="titie" class="form-control" id="titile" value="${article.title}">
-                                            <input type="hidden" name="article" class="form-control" id="articleid" value="${article.articleid}">
+                                            <label class="control-label" for="title">标题</label>
+                                            <input type="text" name="title" class="form-control" id="title" value="${article.title}">
+                                            <input type="hidden" name="articleid" class="form-control" id="articleid" value="${article.articleid}">
                                         </div>
                                     </div>
                                     <div class="row form-group">
@@ -107,7 +111,7 @@
                                         </div>
                                     </div>
                                     <div class="row form-group">
-                                        <button type="submit" class="templatemo-blue-button">提交</button>
+                                        <button type="submit" class="templatemo-blue-button" style="margin-left: 20px">提交</button>
                                     </div>
                                 </form>
                             </div>
