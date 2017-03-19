@@ -25,4 +25,8 @@ public interface DiscussService {
     List<Discuss> SelectHotDiscussByUid(Integer userid);
 
     Pagination getPage(@Param("begin")int begin, @Param("end")int end, @Param("vistor")int  vistor);
+
+    int insertDiscuss(Discuss discuss);
+
+    Pagination getPagea(@Param("begin")int begin, @Param("end")int end);
 }

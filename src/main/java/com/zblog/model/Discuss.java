@@ -13,7 +13,7 @@ public class Discuss {
 
     private Integer reply;
 
-    private Integer relpyuserid;
+    private Integer replyuserid;
 
     private String topic;
 
@@ -35,16 +35,18 @@ public class Discuss {
     public User getUser() {
         return user;
     }
-    public Integer getRelpyuserid() {
-        return relpyuserid;
-    }
 
-    public void setRelpyuserid(Integer relpyuserid) {
-        this.relpyuserid = relpyuserid;
-    }
     public void setUser(User user) {
         this.user = user;
     }
+    public Integer getReplyuserid() {
+        return replyuserid;
+    }
+
+    public void setReplyuserid(Integer replyuserid) {
+        this.replyuserid = replyuserid;
+    }
+
     public Integer getDiscussid() {
         return discussid;
     }

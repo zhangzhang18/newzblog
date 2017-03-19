@@ -9,11 +9,13 @@ import org.apache.ibatis.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 /**
  * Created by Administrator on 2017/3/12.
  */
+@Transactional
 @Service("MessageService")
 public class MessageServiceImpl implements MessageService {
     protected static final Log log = LogFactory.getLog(MessageServiceImpl.class);

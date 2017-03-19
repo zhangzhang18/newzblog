@@ -9,7 +9,7 @@
         <result column="reply" jdbcType="INTEGER" property="reply"/>
         <result column="topic" jdbcType="VARCHAR" property="topic"/>
         <result column="isshow" property="isshow" jdbcType="INTEGER"/>
-        <result column="replyuserid" property="reply_userid" jdbcType="INTEGER"/>
+        <result column="reply_userid" property="replyuserid" jdbcType="INTEGER"/>
         <result column="wcount" jdbcType="INTEGER" property="wcount"/>
         <association property="user" javaType="com.zblog.model.User">
             <id column="userid" property="userid" jdbcType="INTEGER"/>
@@ -23,7 +23,7 @@
     </resultMap>
 
     <sql id="Base_Column_List">
-    discussid, discuss_datetime,reply_userid, vistor, articleid, reply, topic, isshow,wcount,nickname,userid
+    discussid, discuss_datetime,reply_userid, vistor, articleid, reply, topic, isshow,wcount,nickname,userid,reply_userid
   </sql>
     <sql id="Blob_Column_List">
     discusscontent
@@ -32,13 +32,13 @@
     <select id="SelectAllDiscuss" parameterType="java.lang.Integer" resultMap="ResultMapWithBLOBs">
     select *
     from discuss,user
-    WHERE discuss.vistor=user.userid  AND discuss.isshow=1 AND  discuss.discussid=discuss.reply  ORDER BY discuss_datetime LIMIT 6
+    WHERE discuss.vistor=user.userid  AND discuss.isshow=1 AND  reply=-1   ORDER BY discuss_datetime LIMIT 6
   </select>
     <!--热门讨论-->
     <select id="SelectHotDiscussByZcm" parameterType="java.lang.Integer" resultMap="ResultMapWithBLOBs">
         select *
         from discuss,user
-        WHERE discuss.vistor=user.userid  AND discuss.isshow=1 and discussid=reply ORDER BY wcount LIMIT 6
+        WHERE discuss.vistor=user.userid  AND discuss.isshow=1 and reply=-1  ORDER BY wcount LIMIT 6
     </select>
     <!--首页讨论结束-->
     <!--详情页-->
@@ -52,25 +52,39 @@
     <select id="SelectHotDiscussByUid" parameterType="java.lang.Integer" resultMap="ResultMapWithBLOBs">
         select *
         from discuss,user
-        WHERE   vistor = #{vistor,jdbcType=INTEGER} AND discuss.vistor=user.userid  AND discuss.isshow=1 and discussid=reply ORDER BY wcount LIMIT 6
+        WHERE   vistor = #{vistor,jdbcType=INTEGER} AND discuss.vistor=user.userid  AND discuss.isshow=1 and reply=-1 ORDER BY wcount LIMIT 6
     </select>
     <!--分页 -->
     <select id="getPage" parameterType="map" resultMap="ResultMapWithBLOBs">
         SELECT * FROM discuss,user
         <if test="vistor != null">
-            where  vistor = #{vistor,jdbcType=INTEGER} AND discuss.vistor=user.userid
+            where  vistor = #{vistor} AND discuss.vistor=user.userid and isshow=1 and reply=-1
         </if>
-        ORDER BY discuss_datetime
+        ORDER BY discuss_datetime DESC
         <if test="begin != null">
-            LIMIT #{begin},10
+            LIMIT #{begin},6
         </if>
     </select>
     <select id="getCount" parameterType="java.lang.Integer"
             resultType="java.lang.Integer">
         select count(*) from discuss
         <if test="vistor != null">
-            where vistor = #{vistor,jdbcType=INTEGER}
+            where vistor = #{vistor} and isshow=1  and reply=-1
         </if>
+    </select>
+    <!--分页 -->
+    <select id="getPagea" parameterType="map" resultMap="ResultMapWithBLOBs">
+        SELECT * FROM discuss,user
+            where  discuss.vistor=user.userid and isshow=1 and reply=-1
+        ORDER BY discuss_datetime DESC
+        <if test="begin != null">
+            LIMIT #{begin},6
+        </if>
+    </select>
+    <select id="getCounta" parameterType="java.lang.Integer"
+            resultType="java.lang.Integer">
+            select count(*) from discuss
+            where isshow=1  and reply=-1
     </select>
     <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer">
         select
@@ -84,14 +98,18 @@
     delete from discuss
     where discussid = #{discussid,jdbcType=INTEGER}
   </delete>
+    <!--插入回复-->
     <insert id="insert" parameterType="com.zblog.model.Discuss">
-    insert into discuss (discussid, discuss_datetime, vistor,
-    articleid, reply, topic,
-    isshow, discusscontent)
-    values (#{discussid,jdbcType=INTEGER}, #{discussDatetime,jdbcType=TIMESTAMP}, #{vistor,jdbcType=INTEGER},
-    #{articleid,jdbcType=INTEGER}, #{reply,jdbcType=INTEGER}, #{topic,jdbcType=VARCHAR},
-    #{isshow,jdbcType=INTEGER}, #{discusscontent,jdbcType=LONGVARCHAR})
-  </insert>
+        insert into discuss ( discuss_datetime, reply_userid,reply,isshow, discusscontent,wcount)
+        values ( #{discussDatetime,jdbcType=TIMESTAMP}, #{replyuserid,jdbcType=INTEGER},
+         #{reply,jdbcType=INTEGER}, #{isshow,jdbcType=INTEGER}, #{discusscontent,jdbcType=LONGVARCHAR},0)
+    </insert>
+    <!--添加话题讨论-->
+    <insert id="insertDiscuss" parameterType="com.zblog.model.Discuss">
+        insert into discuss ( vistor,topic,reply,discuss_datetime, isshow, discusscontent,wcount)
+        values (    #{vistor,jdbcType=INTEGER}, #{topic,jdbcType=VARCHAR},  #{reply,jdbcType=INTEGER}, #{discussDatetime,jdbcType=TIMESTAMP},
+         #{isshow,jdbcType=INTEGER}, #{discusscontent,jdbcType=LONGVARCHAR}, #{wcount,jdbcType=INTEGER})
+    </insert>
     <insert id="insertSelective" parameterType="com.zblog.model.Discuss">
         insert into discuss
         <trim prefix="(" suffix=")" suffixOverrides=",">

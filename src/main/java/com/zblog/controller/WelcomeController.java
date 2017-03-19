@@ -83,11 +83,11 @@ public class WelcomeController {
         return "welcome/login";
     }
     @RequestMapping("/article.do")
-    public String article(Integer pageNo,ModelMap modelMap) {
-       List<Article> articleList=articleService.SelectArticleByZcm();
+    public String article(Integer pageNo,ModelMap modelMap,HttpServletRequest request, HttpServletResponse response) {
+
+        String type=request.getParameter("type");
         Pagination pagination = this.articleService.getPagea(
-                SimplePage.cpn(pageNo), Constants.PAGE_SIZE, 0);
-        modelMap.addAttribute("articleList",articleList);
+                SimplePage.cpn(pageNo), Constants.PAGE_SIZE, 0,Integer.parseInt(type));
         modelMap.addAttribute("pagination",pagination);
         System.err.println("文章");
         return "/welcome/article";
@@ -114,8 +114,8 @@ public class WelcomeController {
     }
     @RequestMapping("/discuss.do")
     public String discuss(Integer pageNo,ModelMap modelMap) {
-        Pagination pagination = this.discussService.getPage(
-                SimplePage.cpn(pageNo), Constants.PAGE_SIZE, 0);
+        Pagination pagination = this.discussService.getPagea(
+                SimplePage.cpn(pageNo), Constants.PAGE_SIZE);
         modelMap.addAttribute("pagination",pagination);
         modelMap.addAttribute("pagination",pagination);
         log.println("讨论");

@@ -57,7 +57,7 @@ public class ArticleController {
             article.setAuthor(nowuser.getUserid());
             article.setWcount(0);
             int result = articleService.insert(article);
-            return "redirect:/article/article.do";
+            return "redirect:/article/myArticle.do";
         }else {
             ModelAndView mav = new ModelAndView("welcome/login");
             return "redirect:/welcome/login.do";
@@ -67,11 +67,19 @@ public class ArticleController {
     @RequestMapping("/article.do")
     public String add(HttpServletRequest request, HttpServletResponse response,Integer pageNo,ModelMap modelMap){
         User nowuser  = UserUtil.getUser(request);
+        String type=request.getParameter("type");
         if(nowuser!=null) {
+            if (type==null){
+                Pagination pagination = this.articleService.getPage(
+                        SimplePage.cpn(pageNo), Constants.PAGE_SIZE, nowuser.getUserid());
+                modelMap.addAttribute("pagination",pagination);
+                return "article/article";
+            }else{
             Pagination pagination = this.articleService.getPagea(
-                    SimplePage.cpn(pageNo), Constants.PAGE_SIZE, nowuser.getUserid());
+                    SimplePage.cpn(pageNo), Constants.PAGE_SIZE, nowuser.getUserid(),Integer.parseInt(type));
             modelMap.addAttribute("pagination",pagination);
             return "article/article";
+            }
         }else {
             return "redirect:/welcome/login.do";
         }
@@ -90,13 +98,26 @@ public class ArticleController {
             return mav;
         }
     }
+    @RequestMapping("/myArticle.do")
+    public String my(HttpServletRequest request, HttpServletResponse response,Integer pageNo,ModelMap modelMap){
+        User nowuser  = UserUtil.getUser(request);
+        String type=request.getParameter("type");
+        if(nowuser!=null) {
+            Pagination pagination = this.articleService.getPage(
+                    SimplePage.cpn(pageNo), Constants.PAGE_SIZE, nowuser.getUserid());
+            modelMap.addAttribute("pagination",pagination);
+            return "article/article";
+        }else {
+            return "redirect:/welcome/login.do";
+        }
+    }
     @RequestMapping(value = "/updateArticle.do",method = RequestMethod.POST)
     public String updatepost(Article article,HttpServletRequest request, HttpServletResponse response){
         User nowuser  = UserUtil.getUser(request);
         if(nowuser!=null) {
             article.setUpdateDatetime(new Date());
            int i= articleService.updateByPrimaryKey(article);
-            return "redirect:/article/article.do";
+            return "redirect:/article/myArticle.do";
         }else {
             return "redirect:/welcome/login.do";
         }
@@ -108,7 +129,7 @@ public class ArticleController {
         String id=request.getParameter("articleid");
         if(nowuser!=null) {
             articleService.deleteByPrimaryKey(Integer.parseInt(id));
-            return "redirect:/article/article.do";
+            return "redirect:/article/myArticle.do";
         }else {
             return "redirect:/welcome/login.do";
         }

@@ -61,7 +61,7 @@ public class LoginController {
         if (null != user) {
             this.sessionProvider.logout(request, response);
         }
-        return "redirect:login.do";
+        return "redirect:/welcome/index.do";
     }
 
     @RequestMapping(value = "/login.do", method = RequestMethod.POST)

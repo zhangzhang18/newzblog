@@ -35,4 +35,10 @@ public interface DiscussMapper {
     List<Discuss> getPage(@Param("begin")int begin, @Param("end") int end, @Param("vistor")int vistor);
 
     int getCount(@Param("vistor")int vistor);
+
+    int insertDiscuss(Discuss discuss);
+
+    List<Discuss> getPagea(@Param("begin")int begin, @Param("end") int end);
+
+    int getCounta();
 }

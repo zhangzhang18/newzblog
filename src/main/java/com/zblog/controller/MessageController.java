@@ -33,6 +33,7 @@ public class MessageController {
             if(message.getTouserid()==null){
                 message.setTouserid(0);
             }
+            message.setId(1);
             message.setDatetime(new Date());
             int i= messageService.insert(message);
             return "redirect:/welcome/message.do";

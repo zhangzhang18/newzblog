@@ -10,11 +10,13 @@ import org.apache.ibatis.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 /**
  * Created by hadoop01 on 16-11-29.
  */
+@Transactional
 @Service("ArticleService")
 public class ArticleServiceImpl implements ArticleService {
     protected static final Log log = LogFactory.getLog(ArticleServiceImpl.class);
@@ -77,7 +79,7 @@ public class ArticleServiceImpl implements ArticleService {
         return articleMapper.SelectHotArticleByUid(userid);
     }
 
-    public Pagination getPagea( int pageNo,   int pageSize,  int author) {
+    public Pagination getPage( int pageNo,   int pageSize,  int author) {
         int total = 0;
         Pagination pagination = null;
         List<Article> users = null;
@@ -87,6 +89,20 @@ public class ArticleServiceImpl implements ArticleService {
         int end = begin + pageSize;
         users = this.articleMapper.getPage(begin, end, author);
         total = this.articleMapper.getCount(author);
+        pagination = new Pagination(pageNo, pageSize, total, users);
+        return pagination;
+    }
+
+    public Pagination getPagea( int pageNo,   int pageSize,  int author,int articletype) {
+        int total = 0;
+        Pagination pagination = null;
+        List<Article> users = null;
+        ArticleServiceImpl.log.debug("receive:pageNo=" + pageNo + " pageSize="
+                + pageSize);
+        int begin = (pageNo - 1) * pageSize;
+        int end = begin + pageSize;
+        users = this.articleMapper.getPagea(begin, end, author,articletype);
+        total = this.articleMapper.getCounta(author,articletype);
         pagination = new Pagination(pageNo, pageSize, total, users);
         return pagination;
     }

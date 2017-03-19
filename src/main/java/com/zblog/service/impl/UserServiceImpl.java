@@ -7,11 +7,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import javax.transaction.Transactional;
 import java.util.List;
 
 /**
  * Created by Administrator on 2016/11/19.
  */
+@Transactional
 @Service("UserService")
 public class UserServiceImpl implements UserService {
 

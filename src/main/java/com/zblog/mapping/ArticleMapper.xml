@@ -38,16 +38,16 @@
     </select>
     <!--首页文章-->
     <select id="SelectArticleByZcm" resultMap="ResultMapWithBLOBs">
-    SELECT * FROM article WHERE author=0 ORDER BY create_datetime LIMIT 6
+    SELECT * FROM article WHERE author=0 ORDER BY create_datetime DESC LIMIT 6
   </select>
     <!--热门文章-->
     <select id="SelectHotArticleByZcm" resultMap="ResultMapWithBLOBs">
-        SELECT * FROM article WHERE author=0 ORDER BY wcount LIMIT 6
+        SELECT * FROM article WHERE author=0 ORDER BY wcount DESC LIMIT 6
     </select>
 
     <!--最新文章-->
     <select id="SelectNewArticleByZcm" resultMap="ResultMapWithBLOBs">
-  SELECT * FROM article WHERE author=0 ORDER BY create_datetime LIMIT 2
+  SELECT * FROM article WHERE author=0 ORDER BY create_datetime DESC LIMIT 2
   </select>
     <!--首页文章结束-->
     <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer">
@@ -72,7 +72,31 @@
 
     <!--用户最新文章-->
     <select id="SelectNewArticleByUid" resultMap="ResultMapWithBLOBs">
-        SELECT * FROM article WHERE  author = #{author,jdbcType=INTEGER}  ORDER BY create_datetime DESC LIMIT 2
+        SELECT * FROM article WHERE  author = #{author,jdbcType=INTEGER}  ORDER BY create_datetime  DESC LIMIT 2
+    </select>
+    <!--首页分页文章-->
+    <select id="getPagea" parameterType="map" resultMap="ResultMapWithBLOBs">
+        SELECT * FROM article ,user
+        <if test="author != null">
+            where  author = #{author} AND  article.author=user.userid
+        </if>
+        <if test="articletype != null">
+          AND  articletype=#{articletype}
+        </if>
+        ORDER BY create_datetime DESC
+        <if test="begin != null">
+            LIMIT #{begin},6
+        </if>
+    </select>
+    <select id="getCounta" parameterType="java.lang.Integer"
+            resultType="java.lang.Integer">
+        select count(*) from article
+        <if test="author != null">
+            where author = #{author}
+        </if>
+        <if test="articletype != null">
+            AND  articletype=#{articletype}
+        </if>
     </select>
     <!--分页文章-->
     <select id="getPage" parameterType="map" resultMap="ResultMapWithBLOBs">
@@ -82,7 +106,7 @@
         </if>
         ORDER BY create_datetime DESC
         <if test="begin != null">
-            LIMIT #{begin},10
+            LIMIT #{begin},6
         </if>
     </select>
     <select id="getCount" parameterType="java.lang.Integer"

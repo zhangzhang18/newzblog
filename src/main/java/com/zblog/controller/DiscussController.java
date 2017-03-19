@@ -38,8 +38,10 @@ public class DiscussController {
         if (nowuser != null) {
             discuss.setVistor(nowuser.getUserid());
             discuss.setDiscussDatetime(new Date());
+            discuss.setReply(-1);
             discuss.setIsshow(1);
-            discussService.insert(discuss);
+            discuss.setWcount(0);
+            discussService.insertDiscuss(discuss);
             return "redirect:/welcome/discuss.do";
         }else {
             return "redirect:/welcome/login.do";
@@ -51,10 +53,12 @@ public class DiscussController {
         String id=request.getParameter("discussid");
         if (nowuser != null) {
             discuss.setReply(Integer.parseInt(id));
-            discuss.setRelpyuserid(nowuser.getUserid());
+            discuss.setReplyuserid(nowuser.getUserid());
             discuss.setDiscussDatetime(new Date());
+            discuss.setIsshow(1);
+            discuss.setWcount(0);
             discussService.insert(discuss);
-            return "redirect:/welcome/discussdetail.do";
+            return "redirect:/welcome/discussdetail.do?discussid="+id;
         }else {
             return "redirect:/welcome/login.do";
         }
