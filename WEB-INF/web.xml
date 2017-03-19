@@ -72,6 +72,10 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>SpringMVC</servlet-name>
+        <url-pattern>*.ico</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SpringMVC</servlet-name>
         <url-pattern>*.ptf</url-pattern>
     </servlet-mapping>
     <servlet-mapping>

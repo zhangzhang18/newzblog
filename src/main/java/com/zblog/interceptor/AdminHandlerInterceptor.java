@@ -33,34 +33,23 @@ public class AdminHandlerInterceptor extends HandlerInterceptorAdapter {
 		// 获得用户
 		User user = null;
 		user = this.adminCheck.retrieveUserFromSession(this.session, request);
+		if (user == null) {
+			response.sendRedirect(getLoginUrl(request));
+			System.err.println("登陆拦截");
+			return false;
+		}
         System.out.println("preinterceptor");
 		// 获取用户权限
 		Set<String> perms = new LinkedHashSet<String>();
 		perms = this.adminCheck.retrievePermsFromSession(this.session, request);
 
 		// 获取是否为超级管理员
-
 		String isSuper = this.adminCheck.retrieveIsSuperFromSession(this.session, request);
 
-		// 获取菜单
-
-		// 此时可以为null
 		UserUtil.setUser(request, user);
 
 		UserUtil.setSuper(request, isSuper);
 
-		// 用户为null跳转到登陆页面
-		if (user == null) {
-			response.sendRedirect(getLoginUrl(request));
-			return false;
-		}
-	/*	// 没有访问权限，提示无权限。
-		if (!"1".equals(isSuper) && !permistionPass(uri, perms)) {
-			request.setAttribute("message", "没有权限");
-			System.err.println(HttpServletResponse.SC_FORBIDDEN);
-			response.sendError(HttpServletResponse.SC_FORBIDDEN);
-			return false;
-		}*/
 		return true;
 	}
 
@@ -141,7 +130,7 @@ public class AdminHandlerInterceptor extends HandlerInterceptorAdapter {
 		if (!StringUtils.isEmpty(ctx)) {
 			buff.append(ctx);
 		}
-		return buff.append("/login/login.do").toString();
+		return buff.append("/welcome/login.do").toString();
 
 	}
 

@@ -42,4 +42,6 @@ public interface ArticleService {
     Pagination getPage(@Param("begin")int begin, @Param("end")int end, @Param("author")int  author);
 
     int addLike(int i);
+
+    List<Article> selectByTitle(String title);
 }

@@ -85,7 +85,7 @@
         </if>
         ORDER BY create_datetime DESC
         <if test="begin != null">
-            LIMIT #{begin},6             
+            LIMIT #{begin},6
         </if>
     </select>
     <select id="getCounta" parameterType="java.lang.Integer"
@@ -120,6 +120,13 @@
         select *
         from article,user
         where  articleid = #{articleid,jdbcType=INTEGER} and article.author=user.userid
+    </select>
+    <!--模糊查询-->
+
+    <select id="selectByTitle" resultMap="ResultMapWithBLOBs" parameterType="java.lang.String">
+        select *
+        from article,user
+        where title LIKE concat(concat('%',#{title}),'%') and article.author=user.userid
     </select>
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from article

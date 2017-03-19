@@ -97,6 +97,10 @@ public class ArticleServiceImpl implements ArticleService {
         return articleMapper.addLike(id);
     }
 
+    public List<Article> selectByTitle(String title) {
+        return articleMapper.selectByTitle(title);
+    }
+
     public Pagination getPagea( int pageNo,   int pageSize,  int author,int articletype) {
         int total = 0;
         Pagination pagination = null;

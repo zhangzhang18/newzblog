@@ -22,6 +22,7 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import java.util.Date;
 import java.util.List;
 
 import static jdk.nashorn.internal.runtime.regexp.joni.Config.log;
@@ -98,7 +99,7 @@ public class WelcomeController {
             System.err.println("文章");
         }
 
-        return "/welcome/article";
+        return "/article/article";
     }
     @RequestMapping(value = "/articledetail.do")
     public ModelAndView articledetail(HttpServletRequest request, HttpServletResponse response) {
@@ -148,6 +149,15 @@ public class WelcomeController {
         log.println("简历");
         return "welcome/aboutme";
     }
+
+    @RequestMapping(value = "/search.do",method = RequestMethod.POST)
+    public String search(HttpServletRequest request, HttpServletResponse response,ModelMap modelMap){
+        String title=request.getParameter("title");
+         List<Article> articleList=articleService.selectByTitle(title);
+         modelMap.addAttribute("articleList",articleList);
+      return "welcome/searcharticle";
+    }
+
     @RequestMapping("/404.do")
     public String notfind() {
         return "/404";

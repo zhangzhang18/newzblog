@@ -22,6 +22,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static jdk.nashorn.internal.runtime.regexp.joni.Config.log;
+
 /**
  * Created by hadoop01 on 16-11-29.
  */
@@ -101,6 +103,28 @@ public class ArticleController {
             return mav;
         }
     }
+    @RequestMapping(value = "/updateArticle.do",method = RequestMethod.POST)
+    public String updatepost(Article article,HttpServletRequest request, HttpServletResponse response){
+        User nowuser  = UserUtil.getUser(request);
+        if(nowuser!=null) {
+            article.setUpdateDatetime(new Date());
+            int i= articleService.updateByPrimaryKey(article);
+            return "redirect:/article/articledetail.do?articleid="+article.getArticleid();
+        }else {
+            return "redirect:/welcome/login.do";
+        }
+    }
+    @RequestMapping(value = "/articledetail.do")
+    public ModelAndView articledetail(HttpServletRequest request, HttpServletResponse response) {
+        String id=request.getParameter("articleid");
+        Article article=articleService.selectByPrimaryKey(Integer.parseInt(id));
+        articleService.addWcount(article);
+        ModelAndView mav=new ModelAndView("article/articledetail");
+        mav.addObject("article",article);
+        log.println("文章内容");
+        System.err.println("文章内容");
+        return mav;
+    }
     @RequestMapping("/myArticle.do")
     public String my(HttpServletRequest request, HttpServletResponse response,Integer pageNo,ModelMap modelMap){
         User nowuser  = UserUtil.getUser(request);
@@ -114,17 +138,7 @@ public class ArticleController {
             return "redirect:/welcome/login.do";
         }
     }
-    @RequestMapping(value = "/updateArticle.do",method = RequestMethod.POST)
-    public String updatepost(Article article,HttpServletRequest request, HttpServletResponse response){
-        User nowuser  = UserUtil.getUser(request);
-        if(nowuser!=null) {
-            article.setUpdateDatetime(new Date());
-           int i= articleService.updateByPrimaryKey(article);
-            return "redirect:/article/myArticle.do";
-        }else {
-            return "redirect:/welcome/login.do";
-        }
-    }
+
 
     @RequestMapping("/delete.do")
     public String delete(HttpServletRequest request, HttpServletResponse response){

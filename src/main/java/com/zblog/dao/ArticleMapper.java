@@ -51,4 +51,6 @@ public interface ArticleMapper {
     int getCounta( @Param("author")int author,  @Param("articletype")int articletype);
 
     int addLike(int id);
+
+    List<Article> selectByTitle(String title);
 }

@@ -81,7 +81,7 @@ public class AdminCheckImpl implements AdminCheck{
      */
 
     public User retrieveUserFromSession(HttpSessionProvider session, HttpServletRequest request) {
-        User user = (User) session.getAttribute(request, Constants.AUTH_KEY);
+        User user = (User) session.getAttribute(request,UserUtil.USER_KEY);
         if (user == null) {
             return null;
         }
