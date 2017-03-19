@@ -93,6 +93,10 @@ public class ArticleServiceImpl implements ArticleService {
         return pagination;
     }
 
+    public int addLike(int id) {
+        return articleMapper.addLike(id);
+    }
+
     public Pagination getPagea( int pageNo,   int pageSize,  int author,int articletype) {
         int total = 0;
         Pagination pagination = null;

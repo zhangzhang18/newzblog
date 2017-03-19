@@ -3,7 +3,7 @@
 // PRELOADER
 
 $(window).load(function(){
-    $('.preloader').delay(100).fadeOut("slow"); // set duration in brackets
+    $('.preloader').delay(60).fadeOut("slow"); // set duration in brackets
 });
 
 // HOME BACKGROUND SLIDESHOW

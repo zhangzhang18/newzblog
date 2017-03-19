@@ -30,7 +30,7 @@
     <mvc:resources mapping="/fonts/**" location="/WEB-INF/resources/fonts/" />
     <mvc:resources mapping="/sass/**" location="/WEB-INF/resources/jqvmap/" />
     <mvc:resources mapping="/system/**" location="/WEB-INF/system/" />
-    <mvc:resources mapping="/include/**" location="/WEB-INF/include/" />
+    <mvc:resources mapping="/include/**" location="/WEB-INF/system/include/" />
     <mvc:resources mapping="/ueditor/**" location="/WEB-INF/ueditor/" />
     <mvc:resources mapping="/welcome/**" location="/WEB-INF/system/welcome" />
     <mvc:default-servlet-handler />

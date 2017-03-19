@@ -85,7 +85,7 @@
         </if>
         ORDER BY create_datetime DESC
         <if test="begin != null">
-            LIMIT #{begin},6
+            LIMIT #{begin},6             
         </if>
     </select>
     <select id="getCounta" parameterType="java.lang.Integer"
@@ -129,11 +129,11 @@
     insert into article (articleid, author, title, 
       articletype, create_datetime, update_datetime, 
       is_discuss, discuss_count, is_like, 
-      like_count, content)
+      like_count, content,wcount)
     values (#{articleid,jdbcType=INTEGER}, #{author,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, 
       #{articletype,jdbcType=INTEGER}, #{createDatetime,jdbcType=TIMESTAMP}, #{updateDatetime,jdbcType=TIMESTAMP}, 
       #{isDiscuss,jdbcType=INTEGER}, #{discussCount,jdbcType=INTEGER}, #{isLike,jdbcType=INTEGER}, 
-      #{likeCount,jdbcType=INTEGER}, #{content,jdbcType=LONGVARCHAR})
+      0, #{content,jdbcType=LONGVARCHAR},0)
   </insert>
     <insert id="insertSelective" parameterType="com.zblog.model.Article">
         insert into article
@@ -272,6 +272,12 @@
     <update id="addWcount" parameterType="com.zblog.model.Article">
         update article
         set wcount =wcount+1
+        where articleid = #{articleid,jdbcType=INTEGER}
+    </update>
+    <!--like量累加-->
+    <update id="addLike" parameterType="com.zblog.model.Article">
+        update article
+        set like_count =like_count+1
         where articleid = #{articleid,jdbcType=INTEGER}
     </update>
 </mapper>

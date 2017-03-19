@@ -15,7 +15,7 @@ public class SimplePage {
 
 	protected int pageNo = 1;
 
-	protected int pageSize = 20;
+	protected int pageSize = 6;
 
 	protected int totalCount = 0;
 

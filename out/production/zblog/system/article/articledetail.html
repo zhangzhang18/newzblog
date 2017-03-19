@@ -12,10 +12,10 @@
     <meta name="description" content="">
     <meta name="author" content="templatemo">
 
-    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/font-awesome.css" rel="stylesheet">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/jqvmap/jqvmap.css" media="screen" rel="stylesheet" type="text../css"/>
     <link href="/css/templatemo-style.css" rel="stylesheet">
+    <script src="/js/jquery-1.11.2.min.js"></script>
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -143,7 +143,15 @@
                     </div>
                 </div>
             </div>
+            <div class="pinfortext">
+            <span>
+					<a  id="like" onclick="like(${article.articleid})" title="喜欢">
+						<span><i class="fa fa-heart-o fa-4x" id="support"></i></span>
+						<em id="num">${article.likeCount}</em>
+					</a>
 
+            </span>
+            </div>
         <div class="templatemo-flex-row flex-content-row">
             <div class="col-1">
                 <div class="panel panel-default margin-10">
@@ -197,6 +205,26 @@
         $("#typical").toggle();
 
     });
+    function like(id) {
+        $.ajax({
+            type:"POST",
+            url:"/article/addlike.do",
+            data:{articleid:id},
+            dataType:"json",
+            success:function(data){
+                $("#num").html(data.article.likeCount);
+                $("#support").removeClass();
+                $("#support").addClass("fa");
+                $("#support").addClass("fa-heart");
+                $("#support").addClass("fa-4x");
+                $("#support").css("color","red");
+             //   alert(data.article.likeCount);
+
+            }
+        });
+    }
+
+
 </script>
 
 

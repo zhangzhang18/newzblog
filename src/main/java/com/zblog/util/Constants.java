@@ -18,7 +18,7 @@ public class Constants {
 	/**
 	 * 每页记录数
 	 */
-	public final static int PAGE_SIZE = 10;
+	public final static int PAGE_SIZE = 6;
 
 	public final static String PERMISSION_MODEL = "perms_model";
 

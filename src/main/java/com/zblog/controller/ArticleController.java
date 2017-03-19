@@ -12,12 +12,15 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by hadoop01 on 16-11-29.
@@ -133,5 +136,16 @@ public class ArticleController {
         }else {
             return "redirect:/welcome/login.do";
         }
+    }
+    @RequestMapping(value = "/addlike.do",method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object>  addliike(HttpServletRequest request, HttpServletResponse response){
+        String id=request.getParameter("articleid");
+        Map<String,Object> map = new HashMap<String,Object>();
+        articleService.addLike(Integer.parseInt(id));
+        Article article=articleService.selectByPrimaryKey(Integer.parseInt(id));
+        Map<String, Object> modelMap = new HashMap<String, Object>(1);
+        modelMap.put("article", article);
+        return modelMap;
     }
 }
