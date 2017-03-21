@@ -4,7 +4,6 @@ import com.zblog.common.page.Pagination;
 import com.zblog.dao.DiscussMapper;
 import com.zblog.model.Discuss;
 import com.zblog.service.DiscussService;
-import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.logging.Log;
 import org.apache.ibatis.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;

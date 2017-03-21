@@ -14,5 +14,5 @@ public interface MessageService {
 
     int insert(Message message);
 
-    Pagination getPage(@Param("begin")int begin, @Param("end")int end, @Param("touserid")int  touserid);
+    Pagination getPage(@Param("begin") int begin, @Param("end") int end, @Param("touserid") int touserid);
 }

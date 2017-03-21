@@ -124,7 +124,7 @@
                                         <br>
                                         <div style="text-align:right;">
                                             <i class="fa fa-eye" aria-hidden="true"></i>${article.wcount}&nbsp;&nbsp;&nbsp;&nbsp;
-                                            ${article.createDatetime?string("yyyy-MM-dd HH:mm:ss ")}&nbsp;&nbsp;
+                                            <i class="fa fa-clock-o" aria-hidden="true"></i> ${article.createDatetime?string("yyyy-MM-dd HH:mm:ss ")}&nbsp;&nbsp;
                                             <a href="/welcome/articledetail.do?articleid=${article.articleid}">阅读全文</a>
                                         </div>
                                     </div>
@@ -136,7 +136,7 @@
             </div> <!-- Second row ends -->
         </div>
 
-        <div class="templatemo-content-widget white-bg col-2">
+        <div class="templatemo-content-widget white-bg col-2" style="margin: 0 50px;">
             <div class="templatemo-flex-row flex-content-row">
                 <div class="col-1">
                     <div class="panel-default margin-10"
@@ -150,9 +150,7 @@
                                         <li class="rectangle-list">
                                             <div class="margin-bottom-10" style="line-height: 28px;"><a
                                                     href="/welcome/articledetail.do?articleid=${a.articleid}">
-                                                <h5 class="media-heading text-uppercase" style="color: black;">
-                                                    ${a.title}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-                                                    ${a.createDatetime?string("yyyy-MM-dd HH:mm:ss ")}</h5></a>
+                                                <h5 class="media-heading text-uppercase" style="color: black;"></h5></a>
                                             </div>
                                         </li>
                                     </#list>
@@ -175,9 +173,7 @@
                                                  style="line-height: 28px;"><a
                                                     href="/welcome/discussdetail.do?discussid=${d.discussid}">
                                                 <h5 class="media-heading text-uppercase" style="color: black;">
-                                                    ${d.topic}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                    &nbsp;&nbsp;
-                                                    ${d.discussDatetime?string("yyyy-MM-dd HH:mm:ss ")}</h5>
+                                                    ${d.topic}</h5>
                                             </a>
                                             </div>
                                         </li>

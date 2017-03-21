@@ -38,8 +38,8 @@ public interface ArticleService {
 
     List<Article> SelectHotArticleByUid(Integer userid);
 
-    Pagination getPagea(@Param("begin")int begin, @Param("end")int end, @Param("author")int  author,@Param("articletype")int  articletype);
-    Pagination getPage(@Param("begin")int begin, @Param("end")int end, @Param("author")int  author);
+    Pagination getPagea(@Param("begin") int begin, @Param("end") int end, @Param("author") int author, @Param("articletype") int articletype);
+    Pagination getPage(@Param("begin") int begin, @Param("end") int end, @Param("author") int author);
 
     int addLike(int i);
 

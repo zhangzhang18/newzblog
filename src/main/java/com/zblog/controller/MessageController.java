@@ -34,6 +34,7 @@ public class MessageController {
                 message.setTouserid(0);
             }
             message.setId(1);
+            message.setIsshow(1);
             message.setDatetime(new Date());
             int i= messageService.insert(message);
             return "redirect:/welcome/message.do";
@@ -41,6 +42,7 @@ public class MessageController {
             message.setFromuserid(0);
             message.setTouserid(0);
             message.setDatetime(new Date());
+            message.setIsshow(1);
             int i= messageService.insert(message);
             return "redirect:/welcome/message.do";
         }

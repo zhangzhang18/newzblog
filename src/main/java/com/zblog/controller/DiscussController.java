@@ -1,6 +1,5 @@
 package com.zblog.controller;
 
-import com.zblog.model.Article;
 import com.zblog.model.Discuss;
 import com.zblog.model.User;
 import com.zblog.service.DiscussService;
@@ -14,7 +13,6 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Date;
-import java.util.List;
 
 /**
  * Created by Administrator on 2017/3/14.

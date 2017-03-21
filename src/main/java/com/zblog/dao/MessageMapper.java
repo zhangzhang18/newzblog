@@ -22,7 +22,7 @@ public interface MessageMapper {
 
     List<Message> SelectAllMessage();
 
-    List<Message> getPage(@Param("begin")int begin, @Param("end") int end, @Param("touserid")int touserid);
+    List<Message> getPage(@Param("begin") int begin, @Param("end") int end, @Param("touserid") int touserid);
 
-    int getCount(@Param("touserid")int touserid);
+    int getCount(@Param("touserid") int touserid);
 }

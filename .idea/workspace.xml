@@ -1,102 +1,179 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ebd1f6a3-5c56-4e5b-a505-e90fcd42c8f3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/zblog/interceptor/LoginInterceptor.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/zblog/zblog.war" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/zblog/system/welcome/article.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/resources/images/favicon.ico" afterPath="$PROJECT_DIR$/WEB-INF/resources/images/favicon.ico" />
+    <list default="true" id="ed5161b0-7d9b-4f8c-91bb-0ca9c5e6fb8b" name="Default" comment="0321">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/zblog/filter/WordFilter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/zblog/util/WordsUtil.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/commons_fileupload_1_3_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WEB-INF/system/user/discuss.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/debug.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/zblog/com/zblog/dao/UserInfoMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/zblog/com/zblog/service/UserInfoService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/zblog/com/zblog/service/impl/UserInfoServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/zblog/system/user/discuss.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/zblog/dao/UserInfoMapper.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/zblog/service/UserInfoService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/zblog/service/impl/UserInfoServiceImpl.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/zblog/zblog.war" afterPath="$PROJECT_DIR$/out/artifacts/zblog/zblog.war" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/com/zblog/common/adminCheck/Impl/AdminCheckImpl.class" afterPath="$PROJECT_DIR$/out/production/zblog/com/zblog/common/adminCheck/Impl/AdminCheckImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/com/zblog/controller/ArticleController.class" afterPath="$PROJECT_DIR$/out/production/zblog/com/zblog/controller/ArticleController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/com/zblog/controller/AdminController.class" afterPath="$PROJECT_DIR$/out/production/zblog/com/zblog/controller/AdminController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/com/zblog/controller/DiscussController.class" afterPath="$PROJECT_DIR$/out/production/zblog/com/zblog/controller/DiscussController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/com/zblog/controller/FilleUploadController.class" afterPath="$PROJECT_DIR$/out/production/zblog/com/zblog/controller/FilleUploadController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/com/zblog/controller/MessageController.class" afterPath="$PROJECT_DIR$/out/production/zblog/com/zblog/controller/MessageController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/com/zblog/controller/WelcomeController.class" afterPath="$PROJECT_DIR$/out/production/zblog/com/zblog/controller/WelcomeController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/com/zblog/dao/ArticleMapper.class" afterPath="$PROJECT_DIR$/out/production/zblog/com/zblog/dao/ArticleMapper.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/com/zblog/interceptor/AdminHandlerInterceptor.class" afterPath="$PROJECT_DIR$/out/production/zblog/com/zblog/interceptor/AdminHandlerInterceptor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/com/zblog/service/ArticleService.class" afterPath="$PROJECT_DIR$/out/production/zblog/com/zblog/service/ArticleService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/com/zblog/service/impl/ArticleServiceImpl.class" afterPath="$PROJECT_DIR$/out/production/zblog/com/zblog/service/impl/ArticleServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/com/zblog/util/Constants.class" afterPath="$PROJECT_DIR$/out/production/zblog/com/zblog/util/Constants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/resources/images/favicon.ico" afterPath="$PROJECT_DIR$/out/production/zblog/resources/images/favicon.ico" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/com/zblog/service/impl/DiscussServiceImpl.class" afterPath="$PROJECT_DIR$/out/production/zblog/com/zblog/service/impl/DiscussServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/com/zblog/service/impl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/out/production/zblog/com/zblog/service/impl/UserServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_1_41.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_1_41.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_hynnet_jacob_1_18.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_hynnet_jacob_1_18.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_c3p0_0_9_5_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_c3p0_0_9_5_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_mchange_commons_java_0_2_10.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_mchange_commons_java_0_2_10.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_javax_mail_1_5_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_javax_mail_1_5_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_cli_commons_cli_1_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_cli_commons_cli_1_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_9.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_9.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_dbcp_commons_dbcp_1_2_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_dbcp_commons_dbcp_1_2_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_net_commons_net_2_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_net_commons_net_2_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_pool_commons_pool_1_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_pool_commons_pool_1_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_javaee_api_7_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_javaee_api_7_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jstl_jstl_1_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jstl_jstl_1_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_3_8_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_3_8_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_36.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_36.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_seedboxer_ftp_common_0_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_seedboxer_ftp_common_0_6.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjrt_1_8_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjrt_1_8_6.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_6.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_9_13.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_9_13.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_9_13.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_9_13.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_directwebremoting_dwr_3_0_1_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_directwebremoting_dwr_3_0_1_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_freemarker_freemarker_2_3_23.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_freemarker_freemarker_2_3_23.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_2_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_2_6.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_7.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_7.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_7.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_7.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_0_4_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_0_4_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_0_4_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_0_4_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_0_4_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_0_4_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_4_0_4_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_4_0_4_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_0_4_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_0_4_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_0_4_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_0_4_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_0_4_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_0_4_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_4_0_4_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_4_0_4_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_0_4_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_0_4_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_0_4_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_0_4_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_0_4_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_0_4_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_0_4_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_0_4_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__tomcat_commons_logging_4_0_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tomcat_commons_logging_4_0_6.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/resources/css/templatemo-style.css" afterPath="$PROJECT_DIR$/WEB-INF/resources/css/templatemo-style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/system/404.html" afterPath="$PROJECT_DIR$/WEB-INF/system/404.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/system/405.html" afterPath="$PROJECT_DIR$/WEB-INF/system/405.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/system/500.html" afterPath="$PROJECT_DIR$/WEB-INF/system/500.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/system/admin/article.html" afterPath="$PROJECT_DIR$/WEB-INF/system/admin/article.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/system/admin/articledetail.html" afterPath="$PROJECT_DIR$/WEB-INF/system/admin/articledetail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/system/admin/discuss.html" afterPath="$PROJECT_DIR$/WEB-INF/system/admin/discuss.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/system/admin/discussdetail.html" afterPath="$PROJECT_DIR$/WEB-INF/system/admin/discussdetail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/system/admin/index.html" afterPath="$PROJECT_DIR$/WEB-INF/system/admin/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/system/admin/message.html" afterPath="$PROJECT_DIR$/WEB-INF/system/admin/message.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/system/article/addarticle.html" afterPath="$PROJECT_DIR$/WEB-INF/system/article/addarticle.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/system/article/article.html" afterPath="$PROJECT_DIR$/WEB-INF/system/article/article.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/system/article/articledetail.html" afterPath="$PROJECT_DIR$/WEB-INF/system/article/articledetail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/system/article/updatearticle.html" afterPath="$PROJECT_DIR$/WEB-INF/system/article/updatearticle.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/system/discuss/adddiscuss.html" afterPath="$PROJECT_DIR$/WEB-INF/system/discuss/adddiscuss.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/system/discuss/discussdetail.html" afterPath="$PROJECT_DIR$/WEB-INF/system/discuss/discussdetail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/system/include/pagination-1.html" afterPath="$PROJECT_DIR$/WEB-INF/system/include/pagination-1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/system/include/pagination-2.html" afterPath="$PROJECT_DIR$/WEB-INF/system/include/pagination-2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/system/include/pagination-3.html" afterPath="$PROJECT_DIR$/WEB-INF/system/include/pagination-3.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/system/include/pagination.html" afterPath="$PROJECT_DIR$/WEB-INF/system/include/pagination.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/system/index.html" afterPath="$PROJECT_DIR$/WEB-INF/system/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/system/message/message.html" afterPath="$PROJECT_DIR$/WEB-INF/system/message/message.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/system/user/discuss.html" afterPath="$PROJECT_DIR$/WEB-INF/system/user/discuss.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/system/user/index.html" afterPath="$PROJECT_DIR$/WEB-INF/system/user/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/system/welcome/aboutme.html" afterPath="$PROJECT_DIR$/WEB-INF/system/welcome/aboutme.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/system/welcome/discuss.html" afterPath="$PROJECT_DIR$/WEB-INF/system/welcome/discuss.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/system/welcome/index.html" afterPath="$PROJECT_DIR$/WEB-INF/system/welcome/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/system/welcome/login.html" afterPath="$PROJECT_DIR$/WEB-INF/system/welcome/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/system/welcome/message.html" afterPath="$PROJECT_DIR$/WEB-INF/system/welcome/message.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/system/welcome/register.html" afterPath="$PROJECT_DIR$/WEB-INF/system/welcome/register.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/system/welcome/searcharticle.html" afterPath="$PROJECT_DIR$/WEB-INF/system/welcome/searcharticle.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/com/zblog/mapping/ArticleMapper.xml" afterPath="$PROJECT_DIR$/out/production/zblog/com/zblog/mapping/ArticleMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/com/zblog/mapping/MessageMapper.xml" afterPath="$PROJECT_DIR$/out/production/zblog/com/zblog/mapping/MessageMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/resources/css/templatemo-style.css" afterPath="$PROJECT_DIR$/out/production/zblog/resources/css/templatemo-style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/spring/spring-interceptor.xml" afterPath="$PROJECT_DIR$/out/production/zblog/spring/spring-interceptor.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/system/404.html" afterPath="$PROJECT_DIR$/out/production/zblog/system/404.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/system/405.html" afterPath="$PROJECT_DIR$/out/production/zblog/system/405.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/system/500.html" afterPath="$PROJECT_DIR$/out/production/zblog/system/500.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/system/admin/article.html" afterPath="$PROJECT_DIR$/out/production/zblog/system/admin/article.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/system/admin/articledetail.html" afterPath="$PROJECT_DIR$/out/production/zblog/system/admin/articledetail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/system/admin/discuss.html" afterPath="$PROJECT_DIR$/out/production/zblog/system/admin/discuss.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/system/admin/discussdetail.html" afterPath="$PROJECT_DIR$/out/production/zblog/system/admin/discussdetail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/system/admin/index.html" afterPath="$PROJECT_DIR$/out/production/zblog/system/admin/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/system/admin/message.html" afterPath="$PROJECT_DIR$/out/production/zblog/system/admin/message.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/system/article/addarticle.html" afterPath="$PROJECT_DIR$/out/production/zblog/system/article/addarticle.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/system/article/article.html" afterPath="$PROJECT_DIR$/out/production/zblog/system/article/article.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/system/article/articledetail.html" afterPath="$PROJECT_DIR$/out/production/zblog/system/article/articledetail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/system/article/updatearticle.html" afterPath="$PROJECT_DIR$/out/production/zblog/system/article/updatearticle.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/system/discuss/adddiscuss.html" afterPath="$PROJECT_DIR$/out/production/zblog/system/discuss/adddiscuss.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/system/discuss/discussdetail.html" afterPath="$PROJECT_DIR$/out/production/zblog/system/discuss/discussdetail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/system/include/head.html" afterPath="$PROJECT_DIR$/out/production/zblog/system/include/head.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/system/include/left.html" afterPath="$PROJECT_DIR$/out/production/zblog/system/include/left.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/system/include/pagination-1.html" afterPath="$PROJECT_DIR$/out/production/zblog/system/include/pagination-1.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/system/include/pagination-2.html" afterPath="$PROJECT_DIR$/out/production/zblog/system/include/pagination-2.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/system/include/pagination-3.html" afterPath="$PROJECT_DIR$/out/production/zblog/system/include/pagination-3.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/system/include/pagination.html" afterPath="$PROJECT_DIR$/out/production/zblog/system/include/pagination.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/system/index.html" afterPath="$PROJECT_DIR$/out/production/zblog/system/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/system/message/message.html" afterPath="$PROJECT_DIR$/out/production/zblog/system/message/message.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/system/user/discuss.html" afterPath="$PROJECT_DIR$/out/production/zblog/system/user/discuss.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/system/message/addmessage.html" afterPath="$PROJECT_DIR$/out/production/zblog/system/message/addmessage.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/system/user/index.html" afterPath="$PROJECT_DIR$/out/production/zblog/system/user/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/system/welcome/aboutme.html" afterPath="$PROJECT_DIR$/out/production/zblog/system/welcome/aboutme.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/system/welcome/discuss.html" afterPath="$PROJECT_DIR$/out/production/zblog/system/welcome/discuss.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/system/welcome/index.html" afterPath="$PROJECT_DIR$/out/production/zblog/system/welcome/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/system/welcome/login.html" afterPath="$PROJECT_DIR$/out/production/zblog/system/welcome/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/system/welcome/message.html" afterPath="$PROJECT_DIR$/out/production/zblog/system/welcome/message.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/system/welcome/register.html" afterPath="$PROJECT_DIR$/out/production/zblog/system/welcome/register.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/anchor/anchor.html" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/anchor/anchor.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/attachment/attachment.css" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/attachment/attachment.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/attachment/attachment.html" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/attachment/attachment.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/background/background.css" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/background/background.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/background/background.html" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/background/background.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/background/background.js" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/background/background.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/charts/charts.html" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/charts/charts.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/emotion/emotion.css" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/emotion/emotion.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/emotion/emotion.html" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/emotion/emotion.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/emotion/emotion.js" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/emotion/emotion.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/gmap/gmap.html" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/gmap/gmap.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/help/help.css" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/help/help.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/help/help.html" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/help/help.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/help/help.js" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/help/help.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/image/image.css" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/image/image.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/image/image.html" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/image/image.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/image/image.js" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/image/image.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/insertframe/insertframe.html" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/insertframe/insertframe.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/internal.js" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/internal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/link/link.html" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/link/link.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/map/map.html" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/map/map.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/music/music.css" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/music/music.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/music/music.html" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/music/music.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/music/music.js" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/music/music.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/scrawl/scrawl.css" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/scrawl/scrawl.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/scrawl/scrawl.html" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/scrawl/scrawl.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/scrawl/scrawl.js" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/scrawl/scrawl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/searchreplace/searchreplace.html" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/searchreplace/searchreplace.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/searchreplace/searchreplace.js" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/searchreplace/searchreplace.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/snapscreen/snapscreen.html" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/snapscreen/snapscreen.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/spechars/spechars.html" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/spechars/spechars.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/spechars/spechars.js" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/spechars/spechars.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/template/config.js" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/template/config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/template/template.css" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/template/template.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/template/template.html" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/template/template.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/template/template.js" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/template/template.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/video/video.css" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/video/video.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/video/video.html" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/video/video.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/video/video.js" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/video/video.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/webapp/webapp.html" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/webapp/webapp.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/wordimage/wordimage.html" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/wordimage/wordimage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/wordimage/wordimage.js" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/dialogs/wordimage/wordimage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/index.html" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/lang/en/en.js" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/lang/en/en.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/lang/zh-cn/zh-cn.js" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/lang/zh-cn/zh-cn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/themes/default/css/ueditor.css" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/themes/default/css/ueditor.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/themes/default/dialogbase.css" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/themes/default/dialogbase.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/themes/iframe.css" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/themes/iframe.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/third-party/codemirror/codemirror.js" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/third-party/codemirror/codemirror.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/ueditor/ueditor.all.js" afterPath="$PROJECT_DIR$/out/production/zblog/ueditor/ueditor.all.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/zblog/web.xml" afterPath="$PROJECT_DIR$/out/production/zblog/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zblog/common/adminCheck/AdminCheck.java" afterPath="$PROJECT_DIR$/src/main/java/com/zblog/common/adminCheck/AdminCheck.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zblog/common/adminCheck/Impl/AdminCheckImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/zblog/common/adminCheck/Impl/AdminCheckImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zblog/controller/ArticleController.java" afterPath="$PROJECT_DIR$/src/main/java/com/zblog/controller/ArticleController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zblog/controller/AdminController.java" afterPath="$PROJECT_DIR$/src/main/java/com/zblog/controller/AdminController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zblog/controller/DiscussController.java" afterPath="$PROJECT_DIR$/src/main/java/com/zblog/controller/DiscussController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zblog/controller/FilleUploadController.java" afterPath="$PROJECT_DIR$/src/main/java/com/zblog/controller/FilleUploadController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zblog/controller/MessageController.java" afterPath="$PROJECT_DIR$/src/main/java/com/zblog/controller/MessageController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zblog/controller/WelcomeController.java" afterPath="$PROJECT_DIR$/src/main/java/com/zblog/controller/WelcomeController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zblog/dao/ArticleMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/zblog/dao/ArticleMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zblog/dao/DiscussMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/zblog/dao/DiscussMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zblog/dao/MessageMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/zblog/dao/MessageMapper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zblog/interceptor/AdminHandlerInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/com/zblog/interceptor/AdminHandlerInterceptor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zblog/mapping/ArticleMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/zblog/mapping/ArticleMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zblog/interceptor/LoginInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/com/zblog/interceptor/LoginInterceptor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zblog/mapping/MessageMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/zblog/mapping/MessageMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zblog/service/ArticleService.java" afterPath="$PROJECT_DIR$/src/main/java/com/zblog/service/ArticleService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zblog/service/DiscussService.java" afterPath="$PROJECT_DIR$/src/main/java/com/zblog/service/DiscussService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zblog/service/MessageService.java" afterPath="$PROJECT_DIR$/src/main/java/com/zblog/service/MessageService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zblog/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/zblog/service/UserService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zblog/service/impl/ArticleServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/zblog/service/impl/ArticleServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zblog/service/impl/DiscussServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/zblog/service/impl/DiscussServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zblog/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/zblog/service/impl/UserServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zblog/util/FileBean.java" afterPath="$PROJECT_DIR$/src/main/java/com/zblog/util/FileBean.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zblog/util/ImageUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/zblog/util/ImageUtil.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-interceptor.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-interceptor.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WEB-INF/system/welcome/article.html" afterPath="$PROJECT_DIR$/WEB-INF/system/welcome/searcharticle.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zblog.iml" afterPath="$PROJECT_DIR$/zblog.iml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/artifacts/zblog.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/zblog_war_exploded.xml" />
     </list>
-    <ignored path="zblog.iws" />
-    <ignored path=".idea/workspace.xml" />
-    <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
-    <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -107,86 +184,49 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="DatabaseView">
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_TABLE_DETAILS" value="true" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
-  <component name="FavoritesManager">
-    <favorites_list name="zblog" />
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="article.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/WEB-INF/system/article/article.html">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WEB-INF/system/welcome/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-              <folding />
+            <state relative-caret-position="4450">
+              <caret line="178" column="85" lean-forward="false" selection-start-line="178" selection-start-column="62" selection-end-line="178" selection-end-column="85" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addarticle.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WEB-INF/system/article/addarticle.html">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/WEB-INF/system/user/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="10" selection-end-column="10" />
-              <folding />
+            <state relative-caret-position="75">
+              <caret line="138" column="85" lean-forward="false" selection-start-line="138" selection-start-column="85" selection-end-line="138" selection-end-column="85" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="HTML File" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>icon-comment</find>
-      <find>getPagea</find>
-      <find>.templatemo-left-nav li</find>
-      <find>insert</find>
-      <find>replyuserid</find>
-      <find>preloader</find>
-      <find>insetr</find>
-      <find>hear</find>
-      <find>menu-second</find>
-      <find>heart</find>
-      <find>fa-heart</find>
-      <find>totalCount</find>
-      <find>6</find>
-      <find>&lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Search&quot; name=&quot;srch-term&quot; id=&quot;srch-term&quot;&gt;</find>
-      <find>&lt;form class=&quot;templatemo-search-form&quot; role=&quot;search&quot;&gt;</find>
-      <find>&lt;meta name=&quot;author&quot; content=&quot;templatemo&quot;&gt;</find>
-      <find>retrieveUserFromSession</find>
+      <find>zlog</find>
+      <find>main.com.</find>
     </findStrings>
     <replaceStrings>
-      <replace>&lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Search&quot; name=&quot;title&quot; id=&quot;title&quot;&gt;</replace>
-      <replace>&lt;form class=&quot;templatemo-search-form&quot; role=&quot;search&quot; action=&quot;/welcome/search.do&quot; method=&quot;post&quot;&gt;</replace>
-      <replace>&lt;meta name=&quot;author&quot; content=&quot;&quot;&gt;</replace>
+      <replace>zblog</replace>
+      <replace>com.</replace>
     </replaceStrings>
     <dirStrings>
-      <dir>D:\JavaWorkSpace\workspace\zblog\WEB-INF\system</dir>
+      <dir>D:\JavaWorkSpace\workspace\zblog\src\main\java</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
-    <option name="PREVIOUS_COMMIT_AUTHORS">
-      <list>
-        <option value="master" />
-      </list>
-    </option>
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -198,57 +238,26 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/zblog/service/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zblog/model/Discuss.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zblog/controller/DiscussController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zblog/service/DiscussService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zblog/dao/DiscussMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zblog/service/impl/DiscussServiceImpl.java" />
-        <option value="$PROJECT_DIR$/WEB-INF/resources/js/custom.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring/spring-mvc.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zblog/common/page/SimplePage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zblog/util/Constants.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zblog/mapping/DiscussMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zblog/mapping/MessageMapper.xml" />
-        <option value="$PROJECT_DIR$/WEB-INF/system/include/pagination-3.html" />
-        <option value="$PROJECT_DIR$/WEB-INF/system/include/pagination-2.html" />
-        <option value="$PROJECT_DIR$/WEB-INF/system/include/pagination-1.html" />
-        <option value="$PROJECT_DIR$/WEB-INF/system/include/pagination.html" />
-        <option value="$PROJECT_DIR$/WEB-INF/resources/css/templatemo-style.css" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zblog/controller/ArticleController.java" />
-        <option value="$PROJECT_DIR$/WEB-INF/system/admin/articledetail.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zblog/service/ArticleService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zblog/service/impl/ArticleServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/com/zblog/dao/UserInfoMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zblog/dao/UserInfoMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/zblog/common/page/Pagination.java" />
+        <option value="$PROJECT_DIR$/src/main/java/zlog/dao/LikeMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/zlog/dao/ArticleMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zlog/common/page/Pagination.java" />
+        <option value="$PROJECT_DIR$/src/main/com/zlog/model/User.java___jb_tmp___" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zblog/common/page/Pagination.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zblog/dao/ArticleMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zblog/mapping/ArticleMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zblog/model/Discuss.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zblog/dao/UserMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zblog/common/exception/InvalidPasswordException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zblog/model/Message.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zblog/model/Article.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zblog/service/impl/UserInfoServiceImpl.java" />
         <option value="$PROJECT_DIR$/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/WEB-INF/system/welcome/index.html" />
-        <option value="$PROJECT_DIR$/WEB-INF/system/index.html" />
-        <option value="$PROJECT_DIR$/WEB-INF/system/500.html" />
-        <option value="$PROJECT_DIR$/WEB-INF/system/405.html" />
-        <option value="$PROJECT_DIR$/WEB-INF/system/404.html" />
-        <option value="$PROJECT_DIR$/WEB-INF/system/welcome/register.html" />
-        <option value="$PROJECT_DIR$/WEB-INF/system/welcome/message.html" />
-        <option value="$PROJECT_DIR$/WEB-INF/system/welcome/login.html" />
-        <option value="$PROJECT_DIR$/WEB-INF/system/welcome/discuss.html" />
-        <option value="$PROJECT_DIR$/WEB-INF/system/welcome/article.html" />
-        <option value="$PROJECT_DIR$/WEB-INF/system/welcome/aboutme.html" />
-        <option value="$PROJECT_DIR$/WEB-INF/system/user/index.html" />
-        <option value="$PROJECT_DIR$/WEB-INF/system/user/discuss.html" />
-        <option value="$PROJECT_DIR$/WEB-INF/system/message/message.html" />
-        <option value="$PROJECT_DIR$/WEB-INF/system/discuss/discussdetail.html" />
-        <option value="$PROJECT_DIR$/WEB-INF/system/discuss/adddiscuss.html" />
-        <option value="$PROJECT_DIR$/WEB-INF/system/article/addarticle.html" />
-        <option value="$PROJECT_DIR$/WEB-INF/system/article/articledetail.html" />
-        <option value="$PROJECT_DIR$/WEB-INF/system/article/updatearticle.html" />
-        <option value="$PROJECT_DIR$/WEB-INF/system/admin/article.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zblog/controller/WelcomeController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zblog/interceptor/LoginInterceptor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zblog/common/adminCheck/Impl/AdminCheckImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring/spring-mybatis.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zblog/interceptor/AdminHandlerInterceptor.java" />
         <option value="$PROJECT_DIR$/src/main/resources/spring/spring-interceptor.xml" />
-        <option value="$PROJECT_DIR$/WEB-INF/system/article/article.html" />
+        <option value="$PROJECT_DIR$/WEB-INF/system/discuss/discussdetail.html" />
+        <option value="$PROJECT_DIR$/WEB-INF/system/welcome/index.html" />
+        <option value="$PROJECT_DIR$/WEB-INF/system/user/index.html" />
       </list>
     </option>
   </component>
@@ -266,6 +275,11 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="userSettingsFile" value="C:\Users\AUSU\.m2\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
@@ -277,9 +291,6 @@
     <option name="y" value="-9" />
     <option name="width" value="1938" />
     <option name="height" value="1048" />
-  </component>
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -296,10 +307,20 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zblog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="zblog" />
@@ -404,83 +425,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="message" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zblog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zblog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="discuss" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zblog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zblog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="article" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zblog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zblog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zblog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zblog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -598,7 +543,41 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="interceptor" />
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zblog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zblog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zblog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -632,150 +611,39 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zblog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zblog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zblog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zblog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zblog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zblog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="adminCheck" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zblog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zblog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zblog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="adminCheck" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Impl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/WEB-INF/web.xml" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.19885057" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="D:/Application/Git/bin/git.exe" />
     <property name="js.eslint.eslintPackage" value="" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.zblog.dao" />
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\JavaWorkSpace\workspace\zblog\WEB-INF\resources\images" />
-      <recent name="D:\JavaWorkSpace\workspace\zblog\WEB-INF\resources\css" />
-      <recent name="D:\JavaWorkSpace\workspace\zblog\WEB-INF\resources\fonts" />
-      <recent name="D:\JavaWorkSpace\workspace\zblog\WEB-INF\system" />
-      <recent name="D:\JavaWorkSpace\workspace\zblog\WEB-INF\system\user" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.zblog.controller" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\JavaWorkSpace\workspace\zblog\WEB-INF\system\message" />
-      <recent name="D:\JavaWorkSpace\workspace\zblog\WEB-INF\system\article" />
-      <recent name="D:\JavaWorkSpace\workspace\zblog\WEB-INF\system\discuss" />
-      <recent name="F:\workspace\zblog\WEB-INF\resources\images" />
-      <recent name="F:\workspace\zblog\src\main\java\com\zblog\mapping" />
+      <recent name="D:\JavaWorkSpace\workspace\zblog\src\main\java" />
+      <recent name="D:\JavaWorkSpace\workspace\zblog\src\main\java\com\zblog\mapping" />
+      <recent name="D:\JavaWorkSpace\workspace\zblog\src\main\java\com\zblog\controller" />
+      <recent name="D:\JavaWorkSpace\workspace\zblog\src\main\java\com\zblog\interceptor" />
+      <recent name="D:\JavaWorkSpace\workspace\zblog\src\main\java\com\zblog\dao" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.tomcat7">
+  <component name="RunManager" selected="Tomcat Server.TOM7">
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
       <deployment />
       <server-settings />
@@ -785,6 +653,19 @@
       <predefined_log_file id="Tomcat Host Manager" enabled="false" />
       <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method />
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="LOCAL" value="false" />
+      <deployment />
+      <server-settings>
+        <data>
+          <option name="transportHostId" value="" />
+          <host-id />
+        </data>
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -833,7 +714,7 @@
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
       <option name="PREFERRED_AVD" value="" />
       <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
       <option name="DEBUGGER_TYPE" value="Java" />
@@ -872,7 +753,7 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
       <option name="arquillianRunConfiguration">
@@ -1025,7 +906,6 @@
       <setting name="launchBrowser" value="true" />
       <setting name="launchBrowserUrl" value="" />
       <setting name="depsClasspath" value="false" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -1104,6 +984,28 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -1168,17 +1070,18 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <configuration default="false" name="tomcat7" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.75" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration default="false" name="TOM7" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.75" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="zblog">
+        <artifact name="zblog:war exploded">
           <settings>
             <option name="CONTEXT_PATH" value="/" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_zblog_6" />
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_zblog" />
       </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
       <predefined_log_file id="Tomcat Catalina" enabled="true" />
@@ -1187,7 +1090,7 @@
       <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="50751" />
+        <option name="DEBUG_PORT" value="56375" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -1236,153 +1139,91 @@
       </ConfigurationWrapper>
       <method>
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="zblog" />
-          <artifact name="zblog" />
-          <artifact name="zblog" />
+          <artifact name="zblog:war exploded" />
         </option>
       </method>
     </configuration>
     <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.tomcat7" />
+      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.TOM7" />
     </list>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
-      <module name="" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="PM_INSTALL_OPTIONS" value="" />
-      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="DEBUGGER_TYPE" value="Java" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <Java />
-      <Profilers>
-        <option name="GAPID_DISABLE_PCS" value="false" />
-      </Profilers>
-      <option name="DEEP_LINK" value="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <method />
-    </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ebd1f6a3-5c56-4e5b-a505-e90fcd42c8f3" name="Default" comment="" />
-      <created>1489225529446</created>
+      <changelist id="ed5161b0-7d9b-4f8c-91bb-0ca9c5e6fb8b" name="Default" comment="" />
+      <created>1490066453615</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1489225529446</updated>
-      <workItem from="1489225535150" duration="3331000" />
-      <workItem from="1489229255727" duration="1022000" />
-      <workItem from="1489230971365" duration="8853000" />
-      <workItem from="1489276052799" duration="32687000" />
-      <workItem from="1489381085387" duration="30824000" />
-      <workItem from="1489452864154" duration="24095000" />
-      <workItem from="1489534684648" duration="30889000" />
-      <workItem from="1489621377336" duration="1334000" />
-      <workItem from="1489747349545" duration="8808000" />
-      <workItem from="1489797228709" duration="867000" />
-      <workItem from="1489802867310" duration="5181000" />
-      <workItem from="1489823784284" duration="10764000" />
-      <workItem from="1489836484727" duration="2932000" />
-      <workItem from="1489844291625" duration="861000" />
-      <workItem from="1489879683889" duration="33682000" />
+      <updated>1490066453615</updated>
+      <workItem from="1490066455012" duration="1713000" />
+      <workItem from="1490069060549" duration="2197000" />
+      <workItem from="1490071365116" duration="1819000" />
+      <workItem from="1490074028702" duration="1227000" />
+      <workItem from="1490080934782" duration="9000" />
+      <workItem from="1490082794251" duration="5303000" />
+      <workItem from="1490091369685" duration="54000" />
     </task>
-    <task id="LOCAL-00001" summary="0319">
-      <created>1489915736353</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1489915736353</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="196130000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+    <option name="totallyTimeSpent" value="12322000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879817" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32426304" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21655329" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20364416" sideWeight="0.4852941" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16684961" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1796875" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18263888" sideWeight="0.5147059" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32539684" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
   </component>
-  <component name="Vcs.Log.UiProperties">
-    <option name="RECENTLY_FILTERED_USER_GROUPS">
-      <collection />
-    </option>
-    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-      <collection />
-    </option>
-  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="0315" />
-    <MESSAGE value="0319" />
-    <option name="LAST_COMMIT_MESSAGE" value="0319" />
+    <MESSAGE value="0321" />
+    <option name="LAST_COMMIT_MESSAGE" value="0321" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="1" />
-    </breakpoint-manager>
+    <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1390,503 +1231,316 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/zblog/common/adminCheck/AdminCheck.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/zblog/common/page/Pagination.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/freemarker.properties" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/zlog/dao/LikeMapper.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zlog/dao/NoticeMapper.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zlog/model/Article.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zlog/common/page/Pagination.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/common/page/Pagination.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-175">
-          <caret line="8" column="44" lean-forward="true" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
-          <folding>
-            <element signature="e#410#411#0" expanded="false" />
-            <element signature="e#452#453#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/mapping/MessageMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/com/zlog/model/User.java___jb_tmp___" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/zlog/dao/ArticleMapper.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/resources/spring/spring-mvc.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/config.properties" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="40" column="22" lean-forward="false" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
-          <folding>
-            <marker date="1489886149307" expanded="true" signature="1327:1430" ph="select from message" />
-            <marker date="1489886149307" expanded="true" signature="1557:1683" ph="select * fro... message" />
-            <marker date="1489886149307" expanded="true" signature="2356:2413" ph="delete from " />
-            <marker date="1489886149307" expanded="true" signature="2494:2777" ph="insert into message... " />
-            <marker date="1489886149307" expanded="true" signature="4013:4571" ph="update messa... " />
-            <marker date="1489886149307" expanded="true" signature="4664:4952" ph="update messa... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/mapping/DiscussMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="80" column="28" lean-forward="false" selection-start-line="80" selection-start-column="28" selection-end-line="80" selection-end-column="28" />
-          <folding>
-            <marker date="1489886149279" expanded="true" signature="1896:2035" ph="select * fro... discuss" />
-            <marker date="1489886149279" expanded="true" signature="2177:2312" ph="select * fro... discuss" />
-            <marker date="1489886149279" expanded="true" signature="2485:2659" ph="select * fro... discuss" />
-            <marker date="1489886149279" expanded="true" signature="2805:2981" ph="select * fro... discuss" />
-            <marker date="1489886149279" expanded="true" signature="4112:4181" ph="select count... discuss" />
-            <marker date="1489886149279" expanded="true" signature="4306:4523" ph="select , fro... " />
-            <marker date="1489886149279" expanded="true" signature="4613:4684" ph="delete from " />
-            <marker date="1489886149279" expanded="true" signature="4786:5070" ph="insert into discuss... " />
-            <marker date="1489886149279" expanded="true" signature="5183:5519" ph="insert into discuss... " />
-            <marker date="1489886149279" expanded="true" signature="7444:8374" ph="update discu... " />
-            <marker date="1489886149279" expanded="true" signature="8479:8878" ph="update discu... " />
-            <marker date="1489886149279" expanded="true" signature="8972:9320" ph="update discu... " />
-            <marker date="1489886149279" expanded="true" signature="9426:9523" ph="update discu... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/system/include/pagination-3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="27" column="68" lean-forward="false" selection-start-line="27" selection-start-column="68" selection-end-line="27" selection-end-column="95" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#0;n#\sassign#0;n#\sif#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#input#1;n#div#0;n#\sassign#0;n#\sif#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/system/include/pagination-2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="27" column="93" lean-forward="false" selection-start-line="27" selection-start-column="93" selection-end-line="27" selection-end-column="93" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#0;n#\sassign#0;n#\sif#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#input#1;n#div#0;n#\sassign#0;n#\sif#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/system/include/pagination-1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="27" column="92" lean-forward="false" selection-start-line="27" selection-start-column="92" selection-end-line="27" selection-end-column="92" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#0;n#\sassign#0;n#\sassign#0;n#\sif#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#input#1;n#div#0;n#\sassign#0;n#\sassign#0;n#\sif#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/system/include/pagination.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="18" column="84" lean-forward="false" selection-start-line="18" selection-start-column="84" selection-end-line="18" selection-end-column="84" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#0;n#\sassign#0;n#\sif#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#input#1;n#div#0;n#\sassign#0;n#\sif#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/resources/css/templatemo-style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="456" column="0" lean-forward="true" selection-start-line="456" selection-start-column="0" selection-end-line="456" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/system/admin/articledetail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="37" column="14" lean-forward="true" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/service/ArticleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="46" column="1" lean-forward="true" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/service/impl/ArticleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="100" column="35" lean-forward="false" selection-start-line="100" selection-start-column="35" selection-end-line="100" selection-end-column="35" />
-          <folding>
-            <element signature="e#3040#3041#0" expanded="true" />
-            <element signature="e#3097#3098#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="350">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/dao/ArticleMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="54" column="31" lean-forward="false" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
-          <folding />
+        <state relative-caret-position="50">
+          <caret line="2" column="31" lean-forward="true" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/mapping/ArticleMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/model/Discuss.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="120" column="25" lean-forward="true" selection-start-line="120" selection-start-column="25" selection-end-line="120" selection-end-column="25" />
-          <folding>
-            <marker date="1489921076304" expanded="true" signature="2032:2053" ph="SELECT * FRO... article" />
-            <marker date="1489921076304" expanded="true" signature="2139:2186" ph="SELECT * FRO... article" />
-            <marker date="1489921076304" expanded="true" signature="2289:2363" ph="SELECT * FRO... article" />
-            <marker date="1489921076304" expanded="true" signature="2471:2536" ph="SELECT * FRO... article" />
-            <marker date="1489921076304" expanded="true" signature="2641:2715" ph="SELECT * FRO... article" />
-            <marker date="1489921076304" expanded="true" signature="2856:3073" ph="select , fro... " />
-            <marker date="1489921076304" expanded="true" signature="3219:3334" ph="select * fro... article" />
-            <marker date="1489921076304" expanded="true" signature="3446:3535" ph="SELECT * FRO... article" />
-            <marker date="1489921076304" expanded="true" signature="3648:3752" ph="SELECT * FRO... article" />
-            <marker date="1489921076304" expanded="true" signature="5345:5467" ph="select * fro... article" />
-            <marker date="1489921076304" expanded="true" signature="5603:5726" ph="select * fro... article" />
-            <marker date="1489921076304" expanded="true" signature="5816:5887" ph="delete from " />
-            <marker date="1489921076304" expanded="true" signature="5969:6506" ph="insert into article... " />
-            <marker date="1489921076304" expanded="true" signature="9042:10354" ph="update artic... " />
-            <marker date="1489921076304" expanded="true" signature="10459:11081" ph="update artic... " />
-            <marker date="1489921076304" expanded="true" signature="11175:11453" ph="update artic... " />
-            <marker date="1489921076304" expanded="true" signature="11555:11654" ph="update artic... " />
-            <marker date="1489921076304" expanded="true" signature="11762:11869" ph="update artic... " />
-          </folding>
+        <state relative-caret-position="872">
+          <caret line="41" column="24" lean-forward="false" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-mvc.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/common/exception/InvalidPasswordException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-825">
-          <caret line="36" column="35" lean-forward="true" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
-          <folding />
+        <state relative-caret-position="400">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/controller/ArticleController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/model/Article.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="142" column="28" lean-forward="false" selection-start-line="142" selection-start-column="22" selection-end-line="142" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#6546#6561#0" expanded="true" />
-            <element signature="e#6750#6766#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="307">
+          <caret line="33" column="32" lean-forward="true" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="73" column="46" lean-forward="true" selection-start-line="73" selection-start-column="46" selection-end-line="73" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/system/index.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/model/Message.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="9" column="58" lean-forward="false" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
-          <folding />
+          <caret line="36" column="24" lean-forward="false" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/system/500.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/interceptor/AdminHandlerInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="58" lean-forward="false" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="58" />
-          <folding />
+        <state relative-caret-position="445">
+          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/system/405.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="8" column="58" lean-forward="false" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/system/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="58" lean-forward="false" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/system/welcome/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="58" lean-forward="false" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/system/welcome/message.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="58" lean-forward="false" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/system/welcome/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="58" lean-forward="false" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/system/welcome/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="45" lean-forward="true" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/system/welcome/discuss.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="58" lean-forward="false" selection-start-line="13" selection-start-column="58" selection-end-line="13" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/system/welcome/searcharticle.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="58" lean-forward="false" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/system/welcome/aboutme.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="58" lean-forward="false" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/system/user/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="58" lean-forward="false" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/system/user/image.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/model/Like.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/system/user/discuss.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/util/DirectiveUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="58" lean-forward="false" selection-start-line="13" selection-start-column="58" selection-end-line="13" selection-end-column="58" />
-          <folding />
+        <state relative-caret-position="1921">
+          <caret line="77" column="33" lean-forward="true" selection-start-line="77" selection-start-column="33" selection-end-line="77" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/system/message/message.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/util/DownLoadUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="58" lean-forward="false" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/system/message/addmessage.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/system/discuss/discussdetail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="58" lean-forward="false" selection-start-line="13" selection-start-column="58" selection-end-line="13" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/system/discuss/adddiscuss.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="58" lean-forward="false" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
-          <folding>
-            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/system/article/articledetail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="58" lean-forward="false" selection-start-line="13" selection-start-column="58" selection-end-line="13" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/system/article/updatearticle.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="1" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/system/admin/article.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/resources/images/favicon.ico">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/interceptor/WebBinding.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/controller/WelcomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="155" column="59" lean-forward="true" selection-start-line="155" selection-start-column="59" selection-end-line="155" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.0.4.RELEASE/spring-web-4.0.4.RELEASE.jar!/org/springframework/web/util/UrlPathHelper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="43" column="28" lean-forward="false" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/util/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1854">
-          <caret line="7" column="31" lean-forward="false" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/common/adminCheck/AdminCheck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="40" column="39" lean-forward="false" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="39" />
+        <state relative-caret-position="1074">
+          <caret line="43" column="33" lean-forward="false" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/common/adminCheck/Impl/AdminCheckImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="83" column="73" lean-forward="false" selection-start-line="83" selection-start-column="73" selection-end-line="83" selection-end-column="73" />
+        <state relative-caret-position="775">
+          <caret line="31" column="39" lean-forward="true" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/dao/ArticleDiscussMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/dao/UserInfoMapper.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/interceptor/LoginInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/mapping/ArticleDiscussMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" column="24" lean-forward="true" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/dao/UserArticleMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/mapping/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="17" column="45" lean-forward="false" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/controller/AdminController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="379">
+          <caret line="39" column="19" lean-forward="true" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.0.4.RELEASE/spring-context-4.0.4.RELEASE.jar!/org/springframework/stereotype/Repository.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/dao/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/dao/LikeMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-mybatis.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="60" lean-forward="true" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="60" />
+        <state relative-caret-position="181">
+          <caret line="51" column="71" lean-forward="false" selection-start-line="51" selection-start-column="71" selection-end-line="51" selection-end-column="71" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/interceptor/AdminHandlerInterceptor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/service/impl/UserInfoServiceImpl.java" />
+    <entry file="file://$PROJECT_DIR$/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="132" column="36" lean-forward="false" selection-start-line="132" selection-start-column="36" selection-end-line="132" selection-end-column="36" />
+        <state relative-caret-position="350">
+          <caret line="47" column="20" lean-forward="true" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/interceptor/LoginInterceptor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-mvc.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#492#493#0" expanded="true" />
-            <element signature="e#515#516#0" expanded="true" />
-            <element signature="e#956#957#0" expanded="true" />
-            <element signature="e#998#999#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="750">
+          <caret line="30" column="78" lean-forward="true" selection-start-line="30" selection-start-column="78" selection-end-line="30" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/filter/WordFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/controller/MessageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="27" column="40" lean-forward="false" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-interceptor.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="17" column="63" lean-forward="true" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
+        <state relative-caret-position="275">
+          <caret line="17" column="51" lean-forward="false" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/system/article/addarticle.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/controller/ArticleController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="10" selection-end-column="10" />
+        <state relative-caret-position="309">
+          <caret line="42" column="33" lean-forward="false" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WEB-INF/system/article/article.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/util/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+        <state relative-caret-position="189">
+          <caret line="20" column="28" lean-forward="false" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/controller/DiscussController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/service/DiscussService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="30" column="19" lean-forward="true" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/controller/WelcomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="124" column="52" lean-forward="false" selection-start-line="124" selection-start-column="52" selection-end-line="124" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zblog/service/impl/DiscussServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/system/discuss/discussdetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/system/welcome/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4450">
+          <caret line="178" column="85" lean-forward="false" selection-start-line="178" selection-start-column="62" selection-end-line="178" selection-end-column="85" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WEB-INF/system/user/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="138" column="85" lean-forward="false" selection-start-line="138" selection-start-column="85" selection-end-line="138" selection-end-column="85" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
-      <state key="ArquillianSettingsConfigurable.UI">
+      <state key="ArtifactsStructureConfigurable.UI">
         <settings>
+          <artifact-editor />
+          <last-edited>zblog:war exploded</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <last-edited>zblog</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.19885057" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -1894,11 +1548,11 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Web2 (zblog)|Web</last-edited>
+          <last-edited>Web (zblog)|Web</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.19885057" />
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>
@@ -1929,12 +1583,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>zblog</last-edited>
+          <last-edited>Web|zblog</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.19885057" />
-                <option value="0.6" />
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>
@@ -1954,18 +1607,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>commons-fileupload-1.3.1</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.19885057" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ScopeChooserConfigurable.UI">
-        <settings>
+          <last-edited>lib</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

@@ -15,7 +15,8 @@
                 <mvc:mapping path="/article/**"/>
                 <mvc:mapping path="/discuss/**"/>
                 <mvc:exclude-mapping path="/login/login.do"/>
-                <mvc:exclude-mapping path="/welcome/hello.do"/>
+                <mvc:exclude-mapping path="/article/addlike.do"/>
+                <mvc:exclude-mapping path="/message/addMessage.do"/>
                 <mvc:exclude-mapping path="/welcome/*.do"/>
                 <bean class="com.zblog.interceptor.LoginInterceptor"/>
             </mvc:interceptor>

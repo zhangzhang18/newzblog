@@ -2,7 +2,6 @@ package com.zblog.interceptor;
 
 import com.zblog.model.User;
 import com.zblog.util.UserUtil;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 

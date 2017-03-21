@@ -42,13 +42,13 @@ public interface ArticleMapper {
 
     List<Article> SelectHotArticleByUid(Integer userid);
 
-    List<Article> getPage(@Param("begin")int begin, @Param("end") int end, @Param("author")int author);
+    List<Article> getPage(@Param("begin") int begin, @Param("end") int end, @Param("author") int author);
 
-    int getCount(@Param("author")int author);
+    int getCount(@Param("author") int author);
 
-    List<Article> getPagea(@Param("begin")int begin, @Param("end")int end,  @Param("author")int author,  @Param("articletype")int articletype);
+    List<Article> getPagea(@Param("begin") int begin, @Param("end") int end, @Param("author") int author, @Param("articletype") int articletype);
 
-    int getCounta( @Param("author")int author,  @Param("articletype")int articletype);
+    int getCounta(@Param("author") int author, @Param("articletype") int articletype);
 
     int addLike(int id);
 

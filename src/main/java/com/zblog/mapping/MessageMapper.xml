@@ -54,10 +54,10 @@
   </delete>
   <insert id="insert" parameterType="com.zblog.model.Message" >
     insert into message (id, content, fromuserid, 
-      touserid, datetime,name
+      touserid, datetime,name,isshow
       )
     values (#{id,jdbcType=INTEGER}, #{content,jdbcType=VARCHAR}, #{fromuserid,jdbcType=INTEGER}, 
-      #{touserid,jdbcType=INTEGER}, #{datetime,jdbcType=TIMESTAMP}, #{name,jdbcType=VARCHAR}
+      #{touserid,jdbcType=INTEGER}, #{datetime,jdbcType=TIMESTAMP}, #{name,jdbcType=VARCHAR} ,#{isshow,jdbcType=INTEGER}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.zblog.model.Message" >
