@@ -1,0 +1,363 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0013)about:internet -->
+<html>
+<head>
+    <title>myfamily</title>
+    <style type="text/css">
+        html{overflow:hidden;}
+        body{margin:0px; padding:0px; width:100%;height:100%; background-image: url("/images/bg1.jpg")}
+        #screen{position:absolute;left:0px;top:50px; width:100%;	height:100%;}
+        #screen img{position:absolute; cursor:pointer; visibility:hidden; width:0px; height:0px;}
+        #screen .tvover{border:2px solid #876; opacity:1; filter:alpha(opacity=100);}
+        #screen .tvout{border:2px solid #fff; opacity:0.7;}
+        #bankImages{display:none;}
+        .clear{clear:both; height:0px;}
+    </style>
+
+    <script type="text/javascript">
+        var Library = {};
+        Library.ease = function () {
+            this.target = 0;
+            this.position = 0;
+            this.move = function (target, speed)
+            {
+                this.position += (target - this.position) * speed;
+            }
+        }
+        var tv = {
+            O : [],
+            screen : {},
+            grid : {
+                size       : 11,
+                borderSize : 0,
+                zoomed     : false
+            },
+            angle : {
+                x : new Library.ease(),
+                y : new Library.ease()
+            },
+            camera : {
+                x    : new Library.ease(),
+                y    : new Library.ease(),
+                zoom : new Library.ease(),
+                focalLength : 950
+            },
+            init : function ()
+            {
+                this.screen.obj = document.getElementById('screen');
+                var img = document.getElementById('bankImages').getElementsByTagName('img');
+                this.screen.obj.onselectstart = function () { return false; }
+                this.screen.obj.ondrag        = function () { return false; }
+                var ni = 0;
+                var n = (tv.grid.size / 2) - .5;
+                for (var y = -n; y <= n; y++)
+                {
+                    for (var x = -n; x <= n; x++)
+                    {
+                        var o = document.createElement('img');
+                        var i = img[(ni++) % img.length];
+                        o.className = 'tvout';
+                        o.src = i.src;
+                        tv.screen.obj.appendChild(o);
+                        o.point3D = {
+                            x  : x,
+                            y  : y,
+                            z  : new Library.ease()
+                        };
+                        o.point2D = {};
+                        o.ratioImage = 1;
+                        tv.O.push(o);
+                        o.onmouseover = function ()
+                        {
+                            if (!tv.grid.zoomed)
+                            {
+                                if (tv.o)
+                                {
+                                    tv.o.point3D.z.target = 0;
+                                    tv.o.className = 'tvout';
+                                }
+                                this.className = 'tvover';
+                                this.point3D.z.target = -.5;
+                                tv.o = this;
+                            }
+                        }
+                        o.onclick = function ()
+                        {
+                            if (!tv.grid.zoomed)
+                            {
+                                tv.camera.x.target = this.point3D.x;
+                                tv.camera.y.target = this.point3D.y;
+                                tv.camera.zoom.target = tv.screen.w * 1.25;
+                                tv.grid.zoomed = this;
+                            } else {
+                                if (this == tv.grid.zoomed){
+                                    tv.camera.x.target = 0;
+                                    tv.camera.y.target = 0;
+                                    tv.camera.zoom.target = tv.screen.w / (tv.grid.size + .1);
+                                    tv.grid.zoomed = false;
+                                }
+                            }
+                        }
+                        o.calc = function ()
+                        {
+                            this.point3D.z.move(this.point3D.z.target, .5);
+                            var x = (this.point3D.x - tv.camera.x.position) * tv.camera.zoom.position;
+                            var y = (this.point3D.y - tv.camera.y.position) * tv.camera.zoom.position;
+                            var z = this.point3D.z.position * tv.camera.zoom.position;
+                            var xy = tv.angle.cx * y  - tv.angle.sx * z;
+                            var xz = tv.angle.sx * y  + tv.angle.cx * z;
+                            var yz = tv.angle.cy * xz - tv.angle.sy * x;
+                            var yx = tv.angle.sy * xz + tv.angle.cy * x;
+                            this.point2D.scale = tv.camera.focalLength / (tv.camera.focalLength + yz);
+                            this.point2D.x = yx * this.point2D.scale;
+                            this.point2D.y = xy * this.point2D.scale;
+                            this.point2D.w = Math.round(
+                                Math.max(
+                                    0,
+                                    this.point2D.scale * tv.camera.zoom.position * .8
+                                )
+                            );
+                            if (this.ratioImage > 1)
+                                this.point2D.h = Math.round(this.point2D.w / this.ratioImage);
+                            else
+                            {
+                                this.point2D.h = this.point2D.w;
+                                this.point2D.w = Math.round(this.point2D.h * this.ratioImage);
+                            }
+                        }
+                        o.draw = function ()
+                        {
+                            if (this.complete)
+                            {
+                                if (!this.loaded)
+                                {
+                                    if (!this.img)
+                                    {
+                                        this.img = new Image();
+                                        this.img.src = this.src;
+                                    }
+                                    if (this.img.complete)
+                                    {
+                                        this.style.visibility = 'visible';
+                                        this.ratioImage = this.img.width / this.img.height;
+                                        this.loaded = true;
+                                        this.img = false;
+                                    }
+                                }
+                                this.style.left = Math.round(
+                                        this.point2D.x * this.point2D.scale +
+                                        tv.screen.w - this.point2D.w * .5
+                                    ) + 'px';
+                                this.style.top  = Math.round(
+                                        this.point2D.y * this.point2D.scale +
+                                        tv.screen.h - this.point2D.h * .5
+                                    ) + 'px';
+                                this.style.width  = this.point2D.w + 'px';
+                                this.style.height = this.point2D.h + 'px';
+                                this.style.borderWidth = Math.round(
+                                        Math.max(
+                                            this.point2D.w,
+                                            this.point2D.h
+                                        ) * tv.grid.borderSize * .01
+                                    ) + 'px';
+                                this.style.zIndex = Math.floor(this.point2D.scale * 100);
+                            }
+                        }
+                    }
+                }
+                tv.resize();
+                mouse.y = tv.screen.y + tv.screen.h;
+                mouse.x = tv.screen.x + tv.screen.w;
+                tv.run();
+            },
+            resize : function ()
+            {
+                var o = tv.screen.obj;
+                tv.screen.w = o.offsetWidth / 2;
+                tv.screen.h = o.offsetHeight / 2;
+                tv.camera.zoom.target = tv.screen.w / (tv.grid.size + .1);
+                for (tv.screen.x = 0, tv.screen.y = 0; o != null; o = o.offsetParent)
+                {
+                    tv.screen.x += o.offsetLeft;
+                    tv.screen.y += o.offsetTop;
+                }
+            },
+            run : function ()
+            {
+                tv.angle.x.move(-(mouse.y - tv.screen.h - tv.screen.y) * .0025, .1);
+                tv.angle.y.move( (mouse.x - tv.screen.w - tv.screen.x) * .0025, .1);
+                tv.camera.x.move(tv.camera.x.target, tv.grid.zoomed ? .25 : .025);
+                tv.camera.y.move(tv.camera.y.target, tv.grid.zoomed ? .25 : .025);
+                tv.camera.zoom.move(tv.camera.zoom.target, .05);
+                tv.angle.cx = Math.cos(tv.angle.x.position);
+                tv.angle.sx = Math.sin(tv.angle.x.position);
+                tv.angle.cy = Math.cos(tv.angle.y.position);
+                tv.angle.sy = Math.sin(tv.angle.y.position);
+                for (var i = 0, o; o = tv.O[i]; i++)
+                {
+                    o.calc();
+                    o.draw();
+                }
+                setTimeout(tv.run, 32);
+            }
+        }
+        var mouse = {
+            x : 0,
+            y : 0
+        }
+        document.onmousemove = function(e)
+        {
+            if (window.event) e = window.event;
+            mouse.x = e.clientX;
+            mouse.y = e.clientY;
+            return false;
+        }
+    </script>
+</head>
+<body>
+<div style="height:1000px; width:100%;position:relative;">
+    <div id="screen"></div>
+    <div id="bankImages">
+        <!--1--> <!-- mask.png图片为不可见层，不能修改 -->
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/1.jpg">
+        <img alt="" src="/images/family/2.jpg">
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/3.jpg">
+        <img alt="" src="/images/family/4.jpg">
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/mask.png">
+        <!--2-->
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/5.jpg">
+        <img alt="" src="/images/family/6.jpg">
+        <img alt="" src="/images/family/7.jpg">
+        <img alt="" src="/images/family/8.jpg">
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/9.jpg">
+        <img alt="" src="/images/family/10.jpg">
+        <img alt="" src="/images/family/11.jpg">
+        <img alt="" src="/images/family/12.jpg">
+        <img alt="" src="/images/family/mask.png">
+        <!--3-->
+        <img alt="" src="/images/family/13.jpg">
+        <img alt="" src="/images/family/14.jpg">
+        <img alt="" src="/images/family/15.jpg">
+        <img alt="" src="/images/family/16.jpg">
+        <img alt="" src="/images/family/17.jpg">
+        <img alt="" src="/images/family/18.jpg">
+        <img alt="" src="/images/family/19.jpg">
+        <img alt="" src="/images/family/20.jpg">
+        <img alt="" src="/images/family/21.jpg">
+        <img alt="" src="/images/family/22.jpg">
+        <img alt="" src="/images/family/23.jpg">
+        <!--4-->
+        <img alt="" src="/images/family/24.jpg">
+        <img alt="" src="/images/family/25.jpg">
+        <img alt="" src="/images/family/26.jpg">
+        <img alt="" src="/images/family/27.jpg">
+        <img alt="" src="/images/family/28.jpg">
+        <img alt="" src="/images/family/29.jpg">
+        <img alt="" src="/images/family/30.jpg">
+        <img alt="" src="/images/family/31.jpg">
+        <img alt="" src="/images/family/32.jpg">
+        <img alt="" src="/images/family/33.jpg">
+        <img alt="" src="/images/family/34.jpg">
+        <!--5-->
+        <img alt="" src="/images/family/35.jpg">
+        <img alt="" src="/images/family/36.jpg">
+        <img alt="" src="/images/family/37.jpg">
+        <img alt="" src="/images/family/38.jpg">
+        <img alt="" src="/images/family/39.jpg">
+        <img alt="" src="/images/family/40.jpg">
+        <img alt="" src="/images/family/41.jpg">
+        <img alt="" src="/images/family/42.jpg">
+        <img alt="" src="/images/family/43.jpg">
+        <img alt="" src="/images/family/44.jpg">
+        <img alt="" src="/images/family/45.jpg">
+        <!--6-->
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/46.jpg">
+        <img alt="" src="/images/family/47.jpg">
+        <img alt="" src="/images/family/48.jpg">
+        <img alt="" src="/images/family/49.jpg">
+        <img alt="" src="/images/family/50.jpg">
+        <img alt="" src="/images/family/51.jpg">
+        <img alt="" src="/images/family/52.jpg">
+        <img alt="" src="/images/family/53.jpg">
+        <img alt="" src="/images/family/54.jpg">
+        <img alt="" src="/images/family/mask.png">
+        <!--7-->
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/55.jpg">
+        <img alt="" src="/images/family/56.jpg">
+        <img alt="" src="/images/family/57.jpg">
+        <img alt="" src="/images/family/58.jpg">
+        <img alt="" src="/images/family/59.jpg">
+        <img alt="" src="/images/family/60.jpg">
+        <img alt="" src="/images/family/61.jpg">
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/mask.png">
+        <!--8-->
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/62.jpg">
+        <img alt="" src="/images/family/63.jpg">
+        <img alt="" src="/images/family/64.jpg">
+        <img alt="" src="/images/family/65.jpg">
+        <img alt="" src="/images/family/66.jpg">
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/mask.png">
+        <!--9-->
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/67.jpg">
+        <img alt="" src="/images/family/68.jpg">
+        <img alt="" src="/images/family/69.jpg">
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/mask.png">
+        <!--10-->
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/70.jpg">
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/mask.png">
+        <!--11-->
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/mask.png">
+        <img alt="" src="/images/family/mask.png">
+
+    </div>
+</div>
+<script type="text/javascript">
+    onresize = tv.resize;
+    tv.init();
+</script>
+<div class="clear"></div>
+
+</body>
+</html>

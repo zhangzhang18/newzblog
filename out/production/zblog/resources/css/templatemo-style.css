@@ -244,6 +244,9 @@ ol ol {
 .templatemo-sidebar {
     width: 300px;
 }
+#hot {
+    margin: 0 50px;
+}
 
 /*rectangle list*/
 .rectangle-list a {
@@ -1000,7 +1003,6 @@ input[type="radio"]:checked + label span {
     .templatemo-sidebar {
         width: 250px;
     }
-
     .templatemo-search-form {
         margin: 20px;
     }

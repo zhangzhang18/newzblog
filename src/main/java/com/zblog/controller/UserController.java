@@ -53,6 +53,15 @@ public class UserController {
         return mav;
     }
 
+    @RequestMapping("/family.do")
+    public String family(HttpServletRequest request, HttpServletResponse response, ModelMap model) {
+        User nowuser  = UserUtil.getUser(request);
+        if(nowuser.getUserid()==1){
+            return "user/family";
+        }else {
+            return "redirect:/welcome/index.do";
+        }
+    }
     @RequestMapping("/list.do")
     public ModelAndView alluser(HttpServletRequest request, HttpServletResponse response) {
         List<User> users=userService.SelectAll();
@@ -67,5 +76,6 @@ public class UserController {
         ModelAndView mav=new ModelAndView("/users");
         return mav;
     }
+
 
 }

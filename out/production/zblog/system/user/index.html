@@ -18,7 +18,7 @@
     <link href="/css/templatemo-style.css" rel="stylesheet">
     <script>
         var _hmt = _hmt || [];
-        (function() {
+        (function () {
             var hm = document.createElement("script");
             hm.src = "https://hm.baidu.com/hm.js?dcfc18ee0dcef9d4c749fffb4deec003";
             var s = document.getElementsByTagName("script")[0];
@@ -32,7 +32,7 @@
 <div class="templatemo-flex-row">
     <div class="templatemo-sidebar">
         <header class="templatemo-site-header">
-           <i class="fa fa-diamond fa-2x" aria-hidden="true"></i>
+            <i class="fa fa-diamond fa-2x" aria-hidden="true"></i>
             <#if Session.user?exists>
                 <a href="/user/index.do"><h1 class="media-heading text-uppercase">${Session.user.username}个人博客</h1></a>
                 <#else>
@@ -44,7 +44,7 @@
             <div class="profile-photo-overlay"></div>
         </div>
         <!-- Search box -->
-          <form class="templatemo-search-form" role="search" action="/welcome/search.do" method="post">
+        <form class="templatemo-search-form" role="search" action="/welcome/search.do" method="post">
             <div class="input-group">
                 <button type="submit" class="fa fa-search"></button>
                 <input type="text" class="form-control" placeholder="Search" name="title" id="title">
@@ -56,41 +56,48 @@
         <#if Session.user?exists>
             <nav class="templatemo-left-nav">
                 <ul>
-                    <li><a id="article"><i class="fa fa-file-code-o" aria-hidden="true"></i>我的文章</a>
-                        <ul id="typical" class="menu-second">
-                            <li><a href="/article/article.do?type=1">JAVA</a></li>
-                            <li><a href="/article/article.do?type=2">PYTHON</a></li>
-                            <li><a href="/article/article.do?type=3">SQL</a></li>
-                            <li><a href="/article/article.do?type=4">AJAX</a></li>
-                            <li><a href="/article/article.do?type=5">HTML</a></li>
-                            <li><a href="/article/article.do?type=0">随笔</a></li>
-                        </ul></li>
-                    <li><a href="/welcome/discuss.do"><i class="
+                    <#if Session.user.userid==1>
+                        <li><a href="/user/family.do"><i class="fa fa-black-tie fa-fw"></i>照片</a></li>
+                        <#else>
+                            <li><a id="article"><i class="fa fa-file-code-o" aria-hidden="true"></i>我的文章</a>
+                                <ul id="typical" class="menu-second">
+                                    <li><a href="/article/article.do?type=1">JAVA</a></li>
+                                    <li><a href="/article/article.do?type=2">PYTHON</a></li>
+                                    <li><a href="/article/article.do?type=3">SQL</a></li>
+                                    <li><a href="/article/article.do?type=4">AJAX</a></li>
+                                    <li><a href="/article/article.do?type=5">HTML</a></li>
+                                    <li><a href="/article/article.do?type=0">随笔</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/welcome/discuss.do"><i class="
 				fa fa-list-alt fa-fw"></i>讨论</a></li>
-                    <li><a href="/message/myMessage.do"><i class="fa fa-th-list fa-fw"></i>我的留言</a></li>
-                    <li><a href="/login/logout.do"><i class="fa fa-sign-out fa-fw"></i>退出登录</a></li>
+                            <li><a href="/message/myMessage.do"><i class="fa fa-th-list fa-fw"></i>我的留言</a></li>
+                            <li><a href="/login/logout.do"><i class="fa fa-sign-out fa-fw"></i>退出登录</a></li>
+                    </#if>
                 </ul>
             </nav>
             <#else>
-            <nav class="templatemo-left-nav">
-                <ul>
-                    <li><a id="article"><i class="fa fa-file-code-o" aria-hidden="true"></i>文章</a>
-                        <ul id="typical" class="menu-second">
-                            <li><a href="/welcome/article.do?type=1">JAVA</a></li>
-                            <li><a href="/welcome/article.do?type=2">PYTHON</a></li>
-                            <li><a href="/welcome/article.do?type=3">SQL</a></li>
-                            <li><a href="/welcome/article.do?type=4">AJAX</a></li>
-                            <li><a href="/welcome/article.do?type=5">HTML</a></li>
-                            <li><a href="/welcome/article.do?type=0">随笔</a></li>
-                        </ul></li>
-                    <li><a  href="/welcome/discuss.do"><i class="
+                <nav class="templatemo-left-nav">
+                    <ul>
+                        <li><a id="article"><i class="fa fa-file-code-o" aria-hidden="true"></i>文章</a>
+                            <ul id="typical" class="menu-second">
+                                <li><a href="/welcome/article.do?type=1">JAVA</a></li>
+                                <li><a href="/welcome/article.do?type=2">PYTHON</a></li>
+                                <li><a href="/welcome/article.do?type=3">SQL</a></li>
+                                <li><a href="/welcome/article.do?type=4">AJAX</a></li>
+                                <li><a href="/welcome/article.do?type=5">HTML</a></li>
+                                <li><a href="/welcome/article.do?type=0">随笔</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/welcome/discuss.do"><i class="
 				fa fa-list-alt fa-fw"></i>讨论</a>
-                    </li>
-                    <li><a href="/welcome/message.do"><i class="fa fa-th-list fa-fw"></i>留言</a></li>
-                    <li><a href="/welcome/aboutme.do"><i class="fa fa-black-tie fa-fw"></i>关于我</a></li>
-                    <li><a href="/welcome/login.do" target="_blank"><i class="fa fa-sign-in fa-fw"></i>注册/登录</a></li>
-                </ul>
-            </nav>
+                        </li>
+                        <li><a href="/welcome/message.do"><i class="fa fa-th-list fa-fw"></i>留言</a></li>
+                        <li><a href="/welcome/aboutme.do"><i class="fa fa-black-tie fa-fw"></i>关于我</a></li>
+                        <li><a href="/welcome/login.do" target="_blank"><i class="fa fa-sign-in fa-fw"></i>注册/登录</a>
+                        </li>
+                    </ul>
+                </nav>
         </#if>
     </div>
     <!-- Main content -->
@@ -112,7 +119,8 @@
                                     </div>
                                     <div class="media-body">
                                         <a href="/welcome/articledetail.do?articleid=${article.articleid}"><h2
-                                                class="media-heading text-uppercase" id="titlestyle"> ${article.title}<span
+                                                class="media-heading text-uppercase" id="titlestyle">
+                                            ${article.title}<span
                                                 class="badge">new</span></h2></a>
                                         <div class="hidden-xs">
                                             <#if article.content?length lt 150>
@@ -124,7 +132,8 @@
                                         <br>
                                         <div style="text-align:right;">
                                             <i class="fa fa-eye" aria-hidden="true"></i>${article.wcount}&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <i class="fa fa-clock-o" aria-hidden="true"></i> ${article.createDatetime?string("yyyy-MM-dd HH:mm:ss ")}&nbsp;&nbsp;
+                                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                            ${article.createDatetime?string("yyyy-MM-dd HH:mm:ss ")}&nbsp;&nbsp;
                                             <a href="/welcome/articledetail.do?articleid=${article.articleid}">阅读全文</a>
                                         </div>
                                     </div>
@@ -136,21 +145,22 @@
             </div> <!-- Second row ends -->
         </div>
 
-        <div class="templatemo-content-widget white-bg col-2" style="margin: 0 50px;">
+        <div class="templatemo-content-widget white-bg col-2">
             <div class="templatemo-flex-row flex-content-row">
                 <div class="col-1">
                     <div class="panel-default margin-10"
                          style="border: 1px solid #d7d7d7;border-radius: 10px;padding-top: 20px;">
                         <h2 class="col-1 text-center">我的最热文章<span class="badge">hot</span></h2>
                         <hr>
-                        <div class="templatemo-chart margin-10"style=" padding: 20px;">
+                        <div class="templatemo-chart margin-10" style=" padding: 20px;">
                             <ol>
                                 <#if articlehot?exists>
                                     <#list articlehot as a >
                                         <li class="rectangle-list">
                                             <div class="margin-bottom-10" style="line-height: 28px;"><a
                                                     href="/welcome/articledetail.do?articleid=${a.articleid}">
-                                                <h5 class="media-heading text-uppercase" style="color: black;"></h5></a>
+                                                <h5 class="media-heading text-uppercase" style="color: black;">
+                                                    ${a.title}</h5></a>
                                             </div>
                                         </li>
                                     </#list>
@@ -198,7 +208,7 @@
 <script type="text/javascript" src="/js/templatemo-script.js"></script>      <!-- Templatemo Script -->
 <script language="javascript" type="text/javascript">
     $("#typical").hide();
-    $("#article").click(function(){
+    $("#article").click(function () {
         $("#typical").toggle();
 
     });
